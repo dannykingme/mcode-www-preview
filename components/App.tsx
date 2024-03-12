@@ -2,7 +2,7 @@
 
 import { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import cn from 'classnames';
+import cn from 'clsx';
 
 // TODO(dk): Get these page classes on the body element.
 

@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import cn from 'clsx';
 import type { ChangeEvent, HTMLProps, ReactElement } from 'react';
 import React, { createElement, forwardRef, useEffect, useState } from 'react';
 

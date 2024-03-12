@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import cn from 'classnames';
+import cn from 'clsx';
 
 function Path({ d, className, ...rest }) {
   const [length, setLength] = useState(0);

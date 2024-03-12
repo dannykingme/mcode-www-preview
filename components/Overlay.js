@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from 'clsx';
 import BodyClassName from 'react-body-classname';
 import { PortalWithState } from 'react-portal';
 import Icon from '@/components/Icon';

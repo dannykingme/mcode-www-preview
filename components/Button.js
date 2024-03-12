@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import cn from 'clsx';
 import Link from '@/components/Link';
 import Icon from '@/components/Icon';
 

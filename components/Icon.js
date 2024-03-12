@@ -1,4 +1,4 @@
-import cn from 'classnames';
+import cn from 'clsx';
 import piles from '@/data/piles.json';
 import paths from '@/data/paths.json';
 
