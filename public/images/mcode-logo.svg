@@ -1,0 +1,15 @@
+<svg class="mcode-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 734 582">
+  <path class="circle circle-6" d="M734,510c0,39.76-32.24,72-72,72s-72-32.24-72-72,32.24-72,72-72,72,32.24,72,72Z"/>
+  <path class="circle circle-5" d="M734,291c0,39.76-32.24,72-72,72s-72-32.24-72-72,32.24-72,72-72,72,32.24,72,72Z"/>
+  <path class="circle circle-4" d="M734,72c0,39.76-32.24,72-72,72s-72-32.24-72-72S622.24,0,662,0s72,32.24,72,72Z"/>
+  <path class="circle circle-3" d="M144,72c0,39.76-32.24,72-72,72S0,111.76,0,72,32.24,0,72,0s72,32.24,72,72Z"/>
+  <path class="circle circle-2" d="M144,291c0,39.76-32.24,72-72,72S0,330.76,0,291s32.24-72,72-72,72,32.24,72,72Z"/>
+  <path class="circle circle-1" d="M144,510c0,39.76-32.24,72-72,72S0,549.76,0,510s32.24-72,72-72,72,32.24,72,72Z"/>
+  <path class="circle circle-0" d="M439,510c0,39.76-32.24,72-72,72s-72-32.24-72-72,32.24-72,72-72,72,32.24,72,72Z"/>
+  <path class="line line-1" d="M72,510h295"/>
+  <path class="line line-2" d="M72,291l295,235.38"/>
+  <path class="line line-3" d="M72,72l295,438"/>
+  <path class="line line-4" d="M662,72l-295,438"/>
+  <path class="line line-5" d="M662,291l-295,235.38"/>
+  <path class="line line-6" d="M662,510h-295"/>
+</svg>
