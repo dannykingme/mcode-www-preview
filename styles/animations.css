@@ -1,0 +1,282 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                 Keyframes                                 *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-out {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes grow-in {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes grow-in-y {
+  0% {
+    transform: scale(1, 0);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes tile-in-t2b {
+  0% {
+    opacity: 0;
+    transform: translateY(calc(var(--tile) * -1));
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes tile-in-b2t {
+  0% {
+    opacity: 0;
+    transform: translate(0, var(--tile));
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes tile-in-l2r {
+  0% {
+    opacity: 0;
+    transform: translate(calc(var(--tile) * -1));
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes tile-in-r2l {
+  0% {
+    opacity: 0;
+    transform: translate(var(--tile));
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes tile-out-b2t {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(calc(var(--tile) * -1));
+  }
+}
+
+@keyframes tile-out-t2b {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(var(--tile));
+  }
+}
+
+@keyframes shrink-x {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(0, 1);
+  }
+}
+
+@keyframes shrink-y {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 0);
+  }
+}
+
+@keyframes grow-x {
+  0% {
+    transform: scale(0, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes grow-y {
+  0% {
+    transform: scale(1, 0);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes to-white {
+  100% {
+    color: var(--white);
+    text-shadow: 0 1px 1px rgb(0 0 0 / 34%);
+  }
+}
+
+@keyframes to-see-thru {
+  100% {
+    opacity: 0.34;
+  }
+}
+
+@keyframes to-opaque {
+  0% {
+    opacity: 0.34;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twirl-in {
+  0% {
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes twirl-out {
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+}
+
+@keyframes twirl-in-rev {
+  0% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+
+@keyframes twirl-out-rev {
+  100% {
+    opacity: 0;
+    transform: rotateY(-90deg);
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                             Custom Keyframes                              *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+@keyframes overlay {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translate(0, var(--tile));
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translate(0);
+  }
+}
+
+@keyframes drawer-background {
+  0% {
+    opacity: 0;
+    transform: scale(1, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes drawer-caret {
+  0% {
+    margin: calc(var(--xs) * -1);
+  }
+
+  100% {
+    margin: 0;
+  }
+}
+
+@keyframes fill-progress {
+  from {
+    transform: scale(0, 1);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes bone {
+  100% {
+    mask-position: 0;
+  }
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                                 Sequences                                 *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/*
+.example {
+  --dur1: var(--run);
+  --dur2: var(--run);
+  --dur3: var(--run);
+
+  --del1: 0ms;
+  --del2: calc((var(--dur1) * 0.34) + var(--del1));
+  --del3: calc((var(--dur2) * 0.21) + var(--del2));
+
+  .example:nth-child(1) {
+    animation: var(--dur1) var(--fadein) var(--del1) both tile-in-b2t;
+  }
+
+  .example:nth-child(2) {
+    animation: var(--dur2) var(--fadein) var(--del2) both tile-in-b2t;
+  }
+
+  .example:nth-child(3) {
+    animation: var(--dur3) var(--fadein) var(--del3) both tile-in-b2t;
+  }
+}
+*/

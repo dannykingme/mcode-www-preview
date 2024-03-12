@@ -1,0 +1,147 @@
+.hero-paragraph {
+  display: none;
+}
+
+.mcode-logo {
+  color: var(--white);
+  width: calc(var(--tile) * 1.5);
+  svg {
+    fill: currentColor;
+  }
+}
+
+.mcode-logo {
+  overflow: visible;
+  .circle {
+    fill: currentColor;
+    transform-origin: center;
+    transform-box: fill-box;
+    stroke: currentColor;
+    stroke-width: 0;
+  }
+  .circle-0 {
+    transform: translate(0, 0) scale(0);
+  }
+  .circle-1 {
+    transform: translate(200%, 0%) scale(0);
+  }
+  .circle-2 {
+    transform: translate(200%, 150%) scale(0);
+  }
+  .circle-3 {
+    transform: translate(200%, 300%) scale(0);
+  }
+  .circle-4 {
+    transform: translate(-200%, 300%) scale(0);
+  }
+  .circle-5 {
+    transform: translate(-200%, 150%) scale(0);
+  }
+  .circle-6 {
+    transform: translate(-200%, 0%) scale(0);
+  }
+  .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 25;
+    stroke-linecap: round;
+    transform-origin: center;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes trace {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bob-out {
+  25% {
+    stroke-width: 200;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+.mcode-logo {
+  --dur0: var(--run-slow);
+  --dur1: var(--run-slow);
+  --dur2: var(--run-slow);
+  --dur3: var(--run-slow);
+  --dur4: var(--run-slow);
+  --dur5: var(--run-slow);
+  --dur6: var(--run-slow);
+
+  --del0: 0ms;
+  --del1: calc((var(--dur0) * 0.34) + var(--del0));
+  --del2: calc((var(--dur1) * 0.34) + var(--del1));
+  --del3: calc((var(--dur2) * 0.21) + var(--del2));
+  --del4: calc((var(--dur3) * 0.13) + var(--del3));
+  --del5: calc((var(--dur4) * 0.21) + var(--del4));
+  --del6: calc((var(--dur5) * 0.13) + var(--del5));
+
+  .circle-0 {
+    animation: var(--dur0) var(--bounce) var(--del0) both grow-in;
+  }
+
+  .line-1 {
+    animation: var(--dur1) var(--fadein) var(--del1) both trace;
+  }
+
+  .circle-1 {
+    animation: var(--dur1) var(--bounce) var(--del1) both bob-out;
+  }
+
+  .line-6 {
+    animation: var(--dur2) var(--fadein) var(--del2) both trace;
+  }
+
+  .circle-6 {
+    animation: var(--dur2) var(--bounce) var(--del2) both bob-out;
+  }
+
+  .line-2 {
+    animation: var(--dur3) var(--fadein) var(--del3) both trace;
+  }
+
+  .circle-2 {
+    animation: var(--dur3) var(--bounce) var(--del3) both bob-out;
+  }
+
+  .line-5 {
+    animation: var(--dur4) var(--fadein) var(--del4) both trace;
+  }
+
+  .circle-5 {
+    animation: var(--dur4) var(--bounce) var(--del4) both bob-out;
+  }
+
+  .line-3 {
+    animation: var(--dur5) var(--fadein) var(--del5) both trace;
+  }
+
+  .circle-3 {
+    animation: var(--dur5) var(--bounce) var(--del5) both bob-out;
+  }
+
+  .line-4 {
+    animation: var(--dur6) var(--fadein) var(--del6) both trace;
+  }
+
+  .circle-4 {
+    animation: var(--dur6) var(--bounce) var(--del6) both bob-out;
+  }
+}
