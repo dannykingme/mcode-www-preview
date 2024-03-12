@@ -1,6 +1,7 @@
 {
   "extends": ["stylelint-config-standard"],
   "rules": {
+    "no-duplicate-selectors": null,
     "at-rule-no-unknown": [true, { "ignoreAtRules": ["extend"] }],
     "import-notation": "string",
     "color-hex-length": "long",
