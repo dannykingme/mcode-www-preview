@@ -4,11 +4,11 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "paths": {
-      "@/components/*": ["src/components/*"],
-      "@/data/*": ["src/data/*"],
-      "@/helpers/*": ["src/helpers/*"],
-      "@/hooks/*": ["src/hooks/*"],
-      "@/styles/*": ["src/styles/*"],
+      "@/components/*": ["components/*"],
+      "@/data/*": ["data/*"],
+      "@/helpers/*": ["helpers/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/styles/*": ["styles/*"],
       "@/images/*": ["/public/images/*"]
     }
   }

@@ -19,11 +19,11 @@
       }
     ],
     "paths": {
-      "@/components/*": ["/components/*"],
-      "@/data/*": ["/data/*"],
-      "@/helpers/*": ["/helpers/*"],
-      "@/hooks/*": ["/hooks/*"],
-      "@/styles/*": ["/styles/*"],
+      "@/components/*": ["components/*"],
+      "@/data/*": ["data/*"],
+      "@/helpers/*": ["helpers/*"],
+      "@/hooks/*": ["hooks/*"],
+      "@/styles/*": ["styles/*"],
       "@/images/*": ["/public/images/*"]
     }
   },
