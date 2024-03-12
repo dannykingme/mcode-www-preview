@@ -11,7 +11,7 @@ function Path({ d, className, ...rest }) {
   // TODO(dk): This is causing a pop in the animation when page loads.
   useEffect(() => {
     setLength(svgPath.current.getTotalLength());
-  });
+  }, []);
 
   return (
     <path

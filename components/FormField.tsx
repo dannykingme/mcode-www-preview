@@ -5,7 +5,6 @@ import React, { createElement, forwardRef, useEffect, useState } from 'react';
 import WrapWhen from '@/components/WrapWhen';
 import Icon from '@/components/Icon';
 
-// eslint-disable-next-line @typescript-eslint/no-empty—-function
 const noop = (e: Event | FocusEvent | ChangeEvent<HTMLInputElement>) => {};
 
 interface FormFieldProps extends HTMLProps<HTMLInputElement> {
@@ -97,7 +96,7 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
           empty: value === '',
         }));
       }
-    }, [value]);
+    }, [value, state.value]);
 
     const handleChange = (event: any) => {
       setState((oldState) => ({
@@ -350,5 +349,7 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
     );
   }
 );
+
+FormField.displayName = 'FormField';
 
 export default FormField;
