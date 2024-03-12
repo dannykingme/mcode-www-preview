@@ -10,7 +10,7 @@ export default function Home() {
           <Header />
           <div className="hero-content content">
             <div className="hero-media">
-              <div className="mcode-logo">
+              <div className="hero-logo">
                 <Logo />
               </div>
             </div>

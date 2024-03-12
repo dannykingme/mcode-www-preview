@@ -2,21 +2,19 @@
   display: none;
 }
 
-.mcode-logo {
+.hero-logo {
   color: var(--white);
   width: calc(var(--tile) * 1.5);
-  svg {
-    fill: currentColor;
-  }
 }
 
 .mcode-logo {
+  fill: currentcolor;
   overflow: visible;
   .circle {
-    fill: currentColor;
+    fill: currentcolor;
     transform-origin: center;
     transform-box: fill-box;
-    stroke: currentColor;
+    stroke: currentcolor;
     stroke-width: 0;
   }
   .circle-0 {
@@ -42,7 +40,7 @@
   }
   .line {
     fill: none;
-    stroke: currentColor;
+    stroke: currentcolor;
     stroke-width: 25;
     stroke-linecap: round;
     transform-origin: center;
