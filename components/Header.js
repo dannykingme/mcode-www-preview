@@ -6,7 +6,7 @@ export default function Header() {
       <div className="nav content">
         <div className="nav-items">
           <div className="nav-item nav-brand">
-            <Link href="/">Modelcode.ai</Link>
+            <Link href="/">Modelcode AI</Link>
           </div>
           <div className="nav-item">
             <Link href="https://blog.modelcode.ai/">Blog</Link>
