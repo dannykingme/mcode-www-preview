@@ -11,6 +11,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "incremental": true,
     "plugins": [
       {
@@ -18,7 +19,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/components/*": ["/components/*"],
+      "@/data/*": ["/data/*"],
+      "@/helpers/*": ["/helpers/*"],
+      "@/hooks/*": ["/hooks/*"],
+      "@/styles/*": ["/styles/*"],
+      "@/images/*": ["/public/images/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

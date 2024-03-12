@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "postcss-flexbugs-fixes",
+    "postcss-extend-rule",
+    "postcss-advanced-variables",
+    "postcss-property-lookup",
+    "postcss-nested",
+    "postcss-import",
+    "postcss-custom-media",
+    [
+      "postcss-preset-env",
+      {
+        "autoprefixer": {
+          "flexbox": "no-2009"
+        },
+        "stage": 3,
+        "features": {
+          "custom-properties": false
+        }
+      }
+    ]
+  ]
+}
