@@ -1,95 +1,63 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Header from '@/components/Header';
+import App from '@/components/App';
+import Logo from '@/components/Logo';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/mcode-www/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <App>
+      <div className="main">
+        <div className="hero">
+          <Header />
+          <div className="hero-content content">
+            <div className="hero-media">
+              <div className="mcode-logo">
+                <Logo />
+              </div>
+            </div>
+            <div className="hero-paragraph">
+              Liberating engineers to do their best work.
+            </div>
+          </div>
+        </div>
+        <div className="content small">
+          <h1>Rebuild, refactor, and modernize your entire codebase.</h1>
+          <p>
+            We are a group of serial software VC-backed entrepreneurs, with a
+            track record of successful exits. We have worked together before. We
+            are AI experts.
+          </p>
+
+          <p>
+            Over the decades, we have built and rebuilt and re-rebuilt a lot of
+            software platforms. We have suffered while refactoring enormous code
+            bases at both mega cap and startup companies. We have been in the
+            trenches rebuilding and translating and annotating and unit testing
+            old code, bad code, incomprehensible code.
+          </p>
+
+          <p>
+            We have led teams of engineers — our best engineers, our best
+            friends, our best hires, our most valuable players — who have been
+            forced to pay off massive tech debt instead of being liberated to
+            create beautiful new products and features for customers and users.
+            We have face-palmed and banged our heads on our keyboards in late
+            night translation sessions and architecture reviews in thankless
+            pursuit of just...fixing...this...crappy...old...code.
+          </p>
+
+          <p>You know what we’re talking about. You’ve been there, too.</p>
+
+          <p>
+            We decided to vanquish this problem. We at modelcode.ai are solving
+            this problem with AI so you never need to spend another minute with
+            your best resources and precious budget focusing on fixing the
+            legacy problems of the past. We are here to liberate your best
+            engineers to do their best work.
+          </p>
+
+          <p>Funded by Bessemer and Heroic.</p>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </App>
   );
 }
