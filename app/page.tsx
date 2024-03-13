@@ -10,6 +10,7 @@ import Button from '@/components/Button.js';
 import App from '@/components/App';
 import Logo from '@/components/Logo';
 import FormField from '@/components/FormField';
+import ContactForm from '@/components/ContactForm';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
@@ -119,69 +120,8 @@ export default function Home() {
         <div className="content contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
           <p>(A human will respond, not an AI!)</p>
-          {/* <form
-            className="form"
-            action="https://usebasin.com/f/56024030b3c4"
-            method="POST"
-            ref={contactElement}
-          >
-            <FormField label="Name" name="name" required />
-            <FormField
-              label="Email"
-              id="email"
-              name="email"
-              type="email"
-              required
-            />
-            <FormField
-              label="Organization"
-              id="organization"
-              name="organization"
-            />
-            <FormField label="Phone" id="phoneNumber1" name="phoneNumber1" />
-            <FormField
-              label="Message"
-              id="anythingYoudLikeToShare"
-              name="anythingYoudLikeToShare"
-              type="textarea"
-            />
-            <Button type="submit" text="Submit" />
-          </form> */}
-          <iframe
-            src="https://usebasin.com/form/348457fd5b4c/view/9340a92fbb1e?iframe=true"
-            // onLoad="this.contentWindow.postMessage('getHeight', '*');"
-            height={524}
-            width="100%"
-            frameBorder="0"
-            style={{ border: 'none', overflow: 'hidden' }}
-          ></iframe>
+          <ContactForm contactElement={contactElement} />
         </div>
-
-        {/* <form action="https://usebasin.com/f/348457fd5b4c" method="POST">
-          <label htmlFor="name">Name </label>
-          <input type="text" name="name" id="name" required />
-
-          <label htmlFor="email">Email </label>
-          <input type="email" name="email" id="email" required />
-
-          <label htmlFor="organization">Organization </label>
-          <input type="text" name="organization" id="organization" />
-
-          <label htmlFor="phoneNumber1">Phone </label>
-          <input type="text" name="phoneNumber1" id="phoneNumber1" />
-
-          <label htmlFor="anythingYoudLikeToShare">
-            Anything you'd like to share?{' '}
-          </label>
-          <textarea
-            id="anythingYoudLikeToShare"
-            name="anythingYoudLikeToShare"
-            rows={5}
-            cols={33}
-          />
-
-          <button type="submit">Submit</button>
-        </form> */}
       </div>
       <Footer handleAboutClick={handleAboutClick} />
     </App>

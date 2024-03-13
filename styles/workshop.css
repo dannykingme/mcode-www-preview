@@ -6,6 +6,9 @@
 }
 
 .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: var(--xl);
   margin-bottom: var(--xl);
   h1 {
@@ -13,6 +16,15 @@
   }
   p {
     margin-top: var(--xs);
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(var(--xl) * 2);
+    .aff {
+      width: 100%;
+    }
   }
 }
 
