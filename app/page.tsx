@@ -181,7 +181,7 @@ export default function Home() {
           <button type="submit">Submit</button>
         </form> */}
       </div>
-      <Footer />
+      <Footer handleAboutClick={handleAboutClick} />
     </App>
   );
 }

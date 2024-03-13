@@ -18,7 +18,6 @@
 
 .nav-brand {
   position: relative;
-  color: red;
   height: var(--margin);
   svg {
     width: 100%;
@@ -50,6 +49,7 @@
 }
 
 .footer {
+  font-family: var(--font-copy);
   display: flex;
   align-items: center;
   justify-content: center;

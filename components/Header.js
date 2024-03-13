@@ -9,7 +9,7 @@ export default function Header({ handleAboutClick, handleContactClick }) {
         <div className="nav-items content">
           <div className="nav-item nav-brand">
             <Logo />
-            <button className="link" href="/" onClick={handleAboutClick} />
+            <button className="link" onClick={handleAboutClick} />
           </div>
           <div className="nav-item">
             <button onClick={handleAboutClick}>About</button>
