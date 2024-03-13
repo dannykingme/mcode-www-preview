@@ -10,6 +10,8 @@ import Button from '@/components/Button.js';
 import App from '@/components/App';
 import Logo from '@/components/Logo';
 import FormField from '@/components/FormField';
+import HeroicLogo from '@/images/heroic-logo.svg';
+import BessemerLogo from '@/images/bessemer-logo.svg';
 
 export default function Home() {
   const aboutElement: RefObject<HTMLDivElement> = useRef(null);
@@ -104,35 +106,21 @@ export default function Home() {
             legacy problems of the past. We are here to liberate your best
             engineers to do their best work.
           </p>
-
-          <p>
-            Funded by{' '}
-            <Link className="hyperlink" href="https://www.bvp.com/">
-              Bessemer
-            </Link>{' '}
-            and{' '}
-            <Link className="hyperlink" href="https://www.heroicvc.com/">
-              Heroic
-            </Link>
-            .
-          </p>
         </div>
 
-        {/* <div className="content small">
-          <h3>Backed by</h3>
-          <Image
-            src="/mcode-www/images/bessemer-logo.svg"
-            alt="Bessemer"
-            width={200}
-            height={200}
-          />
-          <Image
-            src="/mcode-www/images/heroic-logo.png"
-            alt="Bessemer"
-            width={200}
-            height={200}
-          />
-        </div> */}
+        <div className="content small backed">
+          {/* <h4>Backed by</h4> */}
+          <div className="backed-logos">
+            <div className="backed-logo">
+              <HeroicLogo />
+              <Link className="link" href="https://www.heroicvc.com/" />
+            </div>
+            <div className="backed-logo">
+              <BessemerLogo />
+              <Link className="link" href="https://www.bvp.com/" />
+            </div>
+          </div>
+        </div>
 
         <div className="content small contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
