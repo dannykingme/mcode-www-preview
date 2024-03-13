@@ -135,7 +135,7 @@ export default function Home() {
         </div> */}
 
         <div className="content small contact-form" ref={contactElement}>
-          <h1>Let's chat.</h1>
+          <h1>Let’s chat.</h1>
           <p>(A human will respond, not an AI!)</p>
           {/* <form
             className="form"
