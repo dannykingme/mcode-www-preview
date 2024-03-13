@@ -422,7 +422,7 @@
   overflow: hidden;
 
   + .content {
-    margin-top: calc(var(--tile) * 2);
+    padding-top: calc(var(--tile) * 2);
   }
 
   &.small {
