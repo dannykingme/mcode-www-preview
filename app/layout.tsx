@@ -1,38 +1,22 @@
 import type { Metadata } from 'next';
-import { Merriweather, Merriweather_Sans, Montserrat } from 'next/font/google';
+import { DM_Sans, Inter } from 'next/font/google';
 import cn from 'clsx';
 import '@/styles/app.css';
 
-// const roboto = Roboto({
-//   weight: ['400', '700'],
-//   style: ['normal', 'italic'],
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-roboto',
-// });
-
-const merriweather = Merriweather({
-  weight: ['400', '700'],
-  style: ['normal'],
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-merriweather',
-});
-
-// const merriweatherSans = Merriweather_Sans({
-//   weight: ['400', '500', '700'],
-//   style: ['normal'],
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-merriweather-sans',
-// });
-
-const montserrat = Montserrat({
+const dmSans = DM_Sans({
   weight: ['400', '500', '700'],
   style: ['normal'],
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-dm-sans',
+});
+
+const inter = Inter({
+  weight: ['400', '500', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -46,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(merriweather.variable, montserrat.variable)}>
+    <html lang="en" className={cn(dmSans.variable, inter.variable)}>
       <body>{children}</body>
     </html>
   );

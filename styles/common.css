@@ -418,7 +418,7 @@
   position: relative;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--gray-900);
+  background-color: var(--black);
   overflow: hidden;
 
   + .content {
