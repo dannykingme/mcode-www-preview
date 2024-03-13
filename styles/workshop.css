@@ -16,10 +16,20 @@
   }
 }
 
+.nav-brand {
+  color: red;
+  height: var(--margin);
+  svg {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   gap: var(--xs);
 }
@@ -41,6 +51,30 @@
 
 .hero-paragraph {
   /* display: none; */
+  font-size: calc(var(--tile) * 2);
+  line-height: 1.25;
+  span {
+    display: block;
+    white-space: nowrap;
+
+    /* @media (--xs) {
+      display: inline;
+      white-space: wrap;
+      animation: none;
+    } */
+  }
+
+  @media (--s) {
+    font-size: calc(var(--tile) * 1.5);
+  }
+
+  @media (--xs) {
+    font-size: calc(var(--tile) * 1);
+  }
+
+  @media (--xxs) {
+    font-size: calc(var(--tile) * 0.75);
+  }
 }
 
 .hero-logo {
@@ -48,7 +82,43 @@
   width: calc(var(--tile) * 2);
 }
 
+.hero-foot {
+  /* color: var(--blue); */
+  font-weight: 700;
+  font-size: calc(var(--xs) * 1.25);
+  margin-top: calc(var(--xs) * 1.75);
+  margin-left: var(--xs);
+
+  @media (--s) {
+    margin-top: calc(var(--xs) * 1.25);
+    margin-left: var(--xxs);
+  }
+
+  @media (--xs) {
+    margin-top: var(--xxs);
+  }
+
+  @media (--xxs) {
+    margin-top: calc(var(--xs) * 0.75);
+    font-size: calc(var(--xs) * 1);
+  }
+}
+
+.hero-button {
+  /* animation: var(--run-slower) var(--fadein) 2s forwards to-blue; */
+  &:hover {
+    span {
+      color: var(--blue);
+      transition: color var(--run-slow);
+    }
+  }
+  span {
+    transition: color var(--run);
+  }
+}
+
 .mcode-logo {
+  /* display: none; */
   fill: currentcolor;
   overflow: visible;
   .circle {
@@ -115,6 +185,12 @@
   }
 }
 
+@keyframes to-blue {
+  100% {
+    color: var(--blue);
+  }
+}
+
 .mcode-logo {
   --dur0: var(--run-slow);
   --dur1: var(--run-slow);
@@ -124,7 +200,7 @@
   --dur5: var(--run-slow);
   --dur6: var(--run-slow);
 
-  --del0: 0ms;
+  --del0: 500ms;
   --del1: calc((var(--dur0) * 0.34) + var(--del0));
   --del2: calc((var(--dur1) * 0.34) + var(--del1));
   --del3: calc((var(--dur2) * 0.21) + var(--del2));
@@ -223,5 +299,55 @@
     width: 100%;
     max-width: 100%;
     max-height: 100%;
+  }
+}
+
+.hero {
+  --dur1: var(--run-slow);
+  --dur2: var(--run-slow);
+  --dur3: var(--run-slow);
+  --dur4: var(--run-slow);
+
+  --del1: 0ms;
+  --del2: calc((var(--dur1) * 0.34) + var(--del1));
+  --del3: calc((var(--dur2) * 0.21) + var(--del2));
+  --del4: calc((var(--dur3) * 0.13) + var(--del3));
+
+  .hero-paragraph span:nth-child(1) {
+    animation: var(--dur1) var(--fadein) var(--del1) backwards tile-in-b2t;
+  }
+
+  .hero-paragraph span:nth-child(2) {
+    animation: var(--dur2) var(--fadein) var(--del2) backwards tile-in-b2t;
+  }
+
+  .hero-paragraph span:nth-child(3) {
+    animation: var(--dur3) var(--fadein) var(--del3) backwards tile-in-b2t;
+  }
+
+  .hero-foot {
+    animation: var(--dur4) var(--fadein) var(--del4) backwards tile-in-b2t;
+  }
+}
+
+.header {
+  --dur1: var(--run);
+  --dur2: var(--run);
+  --dur3: var(--run);
+
+  --del1: 1000ms;
+  --del2: calc((var(--dur1) * 0.34) + var(--del1));
+  --del3: calc((var(--dur2) * 0.21) + var(--del2));
+
+  .nav-item:nth-child(2) {
+    animation: var(--dur1) var(--fadein) var(--del1) backwards fade-in;
+  }
+
+  .nav-item:nth-child(3) {
+    animation: var(--dur2) var(--fadein) var(--del2) backwards fade-in;
+  }
+
+  .nav-item:nth-child(4) {
+    animation: var(--dur3) var(--fadein) var(--del3) backwards fade-in;
   }
 }

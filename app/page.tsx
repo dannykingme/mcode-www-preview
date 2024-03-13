@@ -46,13 +46,20 @@ export default function Home() {
             handleContactClick={handleContactClick}
           />
           <div className="hero-content content">
-            <div className="hero-media">
+            {/* <div className="hero-media">
               <div className="hero-logo">
                 <Logo />
               </div>
-            </div>
+            </div> */}
             <div className="hero-paragraph">
-              Liberate engineers to do their best work.
+              <span>Liberate</span>
+              <span> engineers to do </span>
+              <span>their best work.</span>
+            </div>
+            <div className="hero-foot">
+              <button className="hero-button" onClick={handleAboutClick}>
+                <span>Modelcode AI</span>
+              </button>
             </div>
           </div>
         </div>
