@@ -363,7 +363,7 @@
   height: calc(var(--input-size) * 2.5);
   min-height: calc(var(--font-size) * 3);
   max-height: calc(var(--font-size) * 16);
-  padding-top: calc((var(--input-size) - var(--input-line-height)) / 2);
+  padding-top: calc(var(--input-padding) * 0.75);
   resize: vertical;
 }
 
