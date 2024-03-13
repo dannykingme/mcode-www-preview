@@ -41,25 +41,10 @@ export default function Home() {
     <App>
       <div className="main">
         <div className="hero">
-          {/* <Header element={contactElement ? contactElement.current : null} /> */}
-          <header className="header">
-            <div className="nav content">
-              <div className="nav-items">
-                <div className="nav-item nav-brand">
-                  <Link href="/">Modelcode AI</Link>
-                </div>
-                <div className="nav-item">
-                  <button onClick={handleAboutClick}>About</button>
-                </div>
-                <div className="nav-item">
-                  <Link href="https://blog.modelcode.ai/">Blog</Link>
-                </div>
-                <div className="nav-item">
-                  <button onClick={handleContactClick}>Contact</button>
-                </div>
-              </div>
-            </div>
-          </header>
+          <Header
+            handleAboutClick={handleAboutClick}
+            handleContactClick={handleContactClick}
+          />
           <div className="hero-content content">
             <div className="hero-media">
               <div className="hero-logo">

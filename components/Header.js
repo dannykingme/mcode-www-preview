@@ -1,32 +1,24 @@
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Link from '@/components/Link';
+import Logo from '@/components/Logo';
 
-export default function Header({ element }) {
-  console.log('element', element);
-  const handleContactClick = () => {
-    requestAnimationFrame(() => {
-      scrollIntoView(element, {
-        scrollMode: 'always',
-        block: 'start',
-        inline: 'start',
-        behavior: 'smooth',
-      });
-    });
-  };
+export default function Header({ handleAboutClick, handleContactClick }) {
   return (
     <header className="header">
-      <div className="nav content">
-        <div className="nav-items">
+      <div className="nav">
+        <div className="nav-items content">
           <div className="nav-item nav-brand">
-            <Link href="/">Modelcode AI</Link>
+            {/* <Link href="/">Modelcode AI</Link> */}
+            <Logo />
+          </div>
+          <div className="nav-item">
+            <button onClick={handleAboutClick}>About</button>
           </div>
           <div className="nav-item">
             <Link href="https://blog.modelcode.ai/">Blog</Link>
           </div>
           <div className="nav-item">
-            <Link href="#" onClick={handleContactClick}>
-              Contact
-            </Link>
+            <button onClick={handleContactClick}>Contact</button>
           </div>
         </div>
       </div>
