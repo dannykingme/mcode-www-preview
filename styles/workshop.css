@@ -60,6 +60,7 @@
   /* display: none; */
   font-size: calc(var(--tile) * 2);
   line-height: 1.25;
+  margin-left: calc((var(--xxs) * 1.5) * -1);
   span {
     display: block;
     white-space: nowrap;
@@ -77,10 +78,12 @@
 
   @media (--xs) {
     font-size: calc(var(--tile) * 1);
+    margin-left: calc((var(--xxs) * 1) * -1);
   }
 
   @media (--xxs) {
     font-size: calc(var(--tile) * 0.75);
+    margin-left: 0;
   }
 }
 
@@ -94,11 +97,10 @@
   font-weight: 500;
   font-size: calc(var(--xs) * 1.25);
   margin-top: calc(var(--xs) * 1.75);
-  margin-left: var(--xs);
+  /* margin-left: var(--xs); */
 
   @media (--s) {
     margin-top: calc(var(--xs) * 1.25);
-    margin-left: var(--xxs);
   }
 
   @media (--xs) {
