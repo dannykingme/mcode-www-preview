@@ -95,9 +95,9 @@ export default function Home() {
             We decided to vanquish this problem. We at modelcode.ai are solving
             this problem with AI so you never need to spend another minute with
             your best resources and precious budget focusing on fixing the
-            legacy problems of the past. We are here to liberate your best
-            engineers to do their best work.
+            legacy problems of the past.
           </p>
+          <p>We’re here to liberate your engineers to do their best work.</p>
         </div>
 
         <div className="content small backed">
@@ -114,7 +114,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="content small contact-form" ref={contactElement}>
+        <hr />
+
+        <div className="content contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
           <p>(A human will respond, not an AI!)</p>
           {/* <form

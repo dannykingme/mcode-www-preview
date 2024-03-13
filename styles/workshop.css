@@ -92,7 +92,7 @@
 
 .hero-foot {
   /* color: var(--blue); */
-  font-weight: 700;
+  font-weight: 500;
   font-size: calc(var(--xs) * 1.25);
   margin-top: calc(var(--xs) * 1.75);
   margin-left: var(--xs);
@@ -271,7 +271,7 @@
 
 .backed {
   text-align: center;
-  margin-top: calc(var(--tile) * 1.5);
+  /* margin-top: calc(var(--tile) * 1.5); */
 }
 
 .backed-logos {
@@ -279,8 +279,8 @@
   align-items: center;
   justify-content: center;
   gap: calc(var(--tile) * 1.5);
-  margin-top: var(--tile);
-  margin-bottom: var(--margin);
+  margin-top: calc(var(--tile) * 2);
+  margin-bottom: calc(var(--tile) * 2);
 
   @media (--xs) {
     gap: calc(var(--tile) * 1);
@@ -293,8 +293,9 @@
 }
 
 .backed-logo {
+  color: var(--gray-500);
   position: relative;
-  height: calc(var(--tile) * 1.5);
+  height: calc(var(--tile) * 0.75);
   .link {
     position: absolute;
     top: 0;
@@ -303,7 +304,7 @@
     height: 100%;
   }
   svg {
-    fill: var(--gray-800);
+    fill: currentcolor;
     width: 100%;
     max-width: 100%;
     max-height: 100%;
