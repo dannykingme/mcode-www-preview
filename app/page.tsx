@@ -1,13 +1,63 @@
+'use client';
+
+import { useRef, RefObject } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import scrollIntoView from 'scroll-into-view-if-needed';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Button from '@/components/Button.js';
 import App from '@/components/App';
 import Logo from '@/components/Logo';
+import FormField from '@/components/FormField';
 
 export default function Home() {
+  const aboutElement: RefObject<HTMLDivElement> = useRef(null);
+  const contactElement: RefObject<HTMLDivElement> = useRef(null);
+  // console.log(contactElement?.current);
+  // const handleContactClick = () => {
+  //   requestAnimationFrame(() => {
+  //     scrollIntoView(contactElement?.current, {
+  //       scrollMode: 'always',
+  //       block: 'start',
+  //       inline: 'start',
+  //       behavior: 'smooth',
+  //     });
+  //   });
+  // };
+  const handleAboutClick = () => {
+    if (aboutElement.current) {
+      aboutElement.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const handleContactClick = () => {
+    if (contactElement.current) {
+      contactElement.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <App>
       <div className="main">
         <div className="hero">
-          <Header />
+          {/* <Header element={contactElement ? contactElement.current : null} /> */}
+          <header className="header">
+            <div className="nav content">
+              <div className="nav-items">
+                <div className="nav-item nav-brand">
+                  <Link href="/">Modelcode AI</Link>
+                </div>
+                <div className="nav-item">
+                  <button onClick={handleAboutClick}>About</button>
+                </div>
+                <div className="nav-item">
+                  <Link href="https://blog.modelcode.ai/">Blog</Link>
+                </div>
+                <div className="nav-item">
+                  <button onClick={handleContactClick}>Contact</button>
+                </div>
+              </div>
+            </div>
+          </header>
           <div className="hero-content content">
             <div className="hero-media">
               <div className="hero-logo">
@@ -15,11 +65,11 @@ export default function Home() {
               </div>
             </div>
             <div className="hero-paragraph">
-              Liberating engineers to do their best work.
+              Liberate engineers to do their best work.
             </div>
           </div>
         </div>
-        <div className="content small">
+        <div className="content small" ref={aboutElement}>
           <h1>Rebuild, refactor, and modernize your entire codebase.</h1>
           <p>
             We are a group of serial software VC-backed entrepreneurs, with a
@@ -55,9 +105,105 @@ export default function Home() {
             engineers to do their best work.
           </p>
 
-          <p>Funded by Bessemer and Heroic.</p>
+          <p>
+            Funded by{' '}
+            <Link className="hyperlink" href="https://www.bvp.com/">
+              Bessemer
+            </Link>{' '}
+            and{' '}
+            <Link className="hyperlink" href="https://www.heroicvc.com/">
+              Heroic
+            </Link>
+            .
+          </p>
         </div>
+
+        {/* <div className="content small">
+          <h3>Backed by</h3>
+          <Image
+            src="/mcode-www/images/bessemer-logo.svg"
+            alt="Bessemer"
+            width={200}
+            height={200}
+          />
+          <Image
+            src="/mcode-www/images/heroic-logo.png"
+            alt="Bessemer"
+            width={200}
+            height={200}
+          />
+        </div> */}
+
+        <div className="content small contact-form" ref={contactElement}>
+          <h1>Let's chat.</h1>
+          <p>(A human will respond, not an AI!)</p>
+          {/* <form
+            className="form"
+            action="https://usebasin.com/f/56024030b3c4"
+            method="POST"
+            ref={contactElement}
+          >
+            <FormField label="Name" name="name" required />
+            <FormField
+              label="Email"
+              id="email"
+              name="email"
+              type="email"
+              required
+            />
+            <FormField
+              label="Organization"
+              id="organization"
+              name="organization"
+            />
+            <FormField label="Phone" id="phoneNumber1" name="phoneNumber1" />
+            <FormField
+              label="Message"
+              id="anythingYoudLikeToShare"
+              name="anythingYoudLikeToShare"
+              type="textarea"
+            />
+            <Button type="submit" text="Submit" />
+          </form> */}
+          <iframe
+            src="https://usebasin.com/form/348457fd5b4c/view/9340a92fbb1e?iframe=true"
+            // onLoad="this.contentWindow.postMessage('getHeight', '*');"
+            height={524}
+            width="100%"
+            frameBorder="0"
+            style={{ border: 'none', overflow: 'hidden' }}
+          ></iframe>
+        </div>
+
+        {/* <form action="https://usebasin.com/f/348457fd5b4c" method="POST">
+          <label htmlFor="name">Name </label>
+          <input type="text" name="name" id="name" required />
+
+          <label htmlFor="email">Email </label>
+          <input type="email" name="email" id="email" required />
+
+          <label htmlFor="organization">Organization </label>
+          <input type="text" name="organization" id="organization" />
+
+          <label htmlFor="phoneNumber1">Phone </label>
+          <input type="text" name="phoneNumber1" id="phoneNumber1" />
+
+          <label htmlFor="anythingYoudLikeToShare">
+            Anything you'd like to share?{' '}
+          </label>
+          <textarea
+            id="anythingYoudLikeToShare"
+            name="anythingYoudLikeToShare"
+            rows={5}
+            cols={33}
+          />
+
+          <button type="submit">Submit</button>
+        </form> */}
       </div>
+      <Footer />
     </App>
   );
 }
+
+// Form reference: https://usebasin.com/guides/jamstack/react

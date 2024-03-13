@@ -1,5 +1,5 @@
 :root {
-  --nav-height: calc(var(--tile) * 1);
+  --nav-height: calc(var(--tile) * 1.5);
 }
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -292,6 +292,7 @@
       }
     }
   }
+
   @media (--xxs) {
     width: 100%;
   }
@@ -347,9 +348,7 @@
 
 .header {
   position: relative;
-  box-shadow:
-    0 1px rgb(255 255 255 / 8%),
-    inset 0 -1px var(--black);
+  box-shadow: 0 1px rgb(255 255 255 / 8%), inset 0 -1px var(--black);
 
   .nav-brand {
     color: var(--white);
@@ -436,9 +435,7 @@
 
   &.dark {
     .footer {
-      box-shadow:
-        0 -1px var(--black),
-        inset 0 1px rgb(255 255 255 / 8%);
+      box-shadow: 0 -1px var(--black), inset 0 1px rgb(255 255 255 / 8%);
     }
   }
 
@@ -450,9 +447,7 @@
     }
 
     .footer {
-      box-shadow:
-        0 -1px var(--black),
-        inset 0 1px rgb(255 255 255 / 8%);
+      box-shadow: 0 -1px var(--black), inset 0 1px rgb(255 255 255 / 8%);
     }
   }
 
@@ -503,6 +498,7 @@
     font-size: calc(var(--xl) * 0.75);
     left: calc(var(--xs) * -0.5);
   }
+
   @media (--xs) {
     font-size: calc(var(--xl) * 0.4);
     line-height: 1;
@@ -521,6 +517,7 @@
 .hero-paragraph {
   font-size: calc(var(--xs) * 1.5);
   font-weight: 500;
+
   @media (--xs) {
     font-size: var(--font-size);
   }
@@ -539,6 +536,7 @@
   @media (--s) {
     margin-top: var(--margin);
   }
+
   @media (--xs) {
     font-size: var(--font-size);
     width: 100%;

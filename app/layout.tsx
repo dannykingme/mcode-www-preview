@@ -37,7 +37,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Modelcode',
-  description: 'Liberating engineers to do their best work.',
+  description: 'Liberate engineers to do their best work.',
 };
 
 export default function RootLayout({

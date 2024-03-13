@@ -1,10 +1,51 @@
+.home-page {
+  p {
+    font-size: calc(var(--xs) * 1.25);
+    /* font-family: var(--font-serif); */
+  }
+}
+
+.contact-form {
+  margin-top: var(--xl);
+  margin-bottom: var(--xl);
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-top: var(--xs);
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--xs);
+}
+
+.form {
+  max-width: calc(var(--xl) * 2);
+  .aff {
+    margin-bottom: var(--margin);
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: calc(var(--tile) * 2); */
+  min-height: var(--nav-height);
+}
+
 .hero-paragraph {
-  display: none;
+  /* display: none; */
 }
 
 .hero-logo {
   color: var(--white);
-  width: calc(var(--tile) * 1.5);
+  width: calc(var(--tile) * 2);
 }
 
 .mcode-logo {

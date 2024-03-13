@@ -68,7 +68,7 @@
   --font-serif: var(--font-merriweather);
   --font-mono: var(--font-roboto-mono);
   --font-cond: var(--font-roboto-condensed);
-  --font-weight: normal;
+  --font-weight: 500;
   --font-size: 16px;
   --font-tiny: 13px;
   --font-height: 1.5;
@@ -157,6 +157,5 @@
 @custom-media --l (max-width: 1280px);
 @custom-media --xl (max-width: 1600px);
 @custom-media --xxl (max-width: 2048px);
-
 @custom-media --shorter (max-height: 768px);
 @custom-media --short (max-height: 1024px);
