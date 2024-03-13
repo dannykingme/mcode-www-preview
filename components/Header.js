@@ -8,8 +8,8 @@ export default function Header({ handleAboutClick, handleContactClick }) {
       <div className="nav">
         <div className="nav-items content">
           <div className="nav-item nav-brand">
-            {/* <Link href="/">Modelcode AI</Link> */}
             <Logo />
+            <button className="link" href="/" onClick={handleAboutClick} />
           </div>
           <div className="nav-item">
             <button onClick={handleAboutClick}>About</button>
