@@ -15,13 +15,14 @@
     margin-bottom: 0;
   }
   p {
-    margin-top: var(--xs);
+    margin-top: calc(var(--xxs) * 2);
   }
   .form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: calc(var(--xl) * 2);
+    margin-top: var(--margin);
     .aff {
       width: 100%;
     }
