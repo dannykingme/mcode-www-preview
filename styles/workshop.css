@@ -382,7 +382,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   /* TODO(dk): decide is auto-dismiss is approriate */
@@ -390,23 +390,29 @@
 }
 
 .toast {
-  color: var(--font-color);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  /* display: ; */
   text-align: center;
   margin: var(--margin);
+  margin-top: calc(var(--margin) + var(--nav-height));
   padding: var(--xs) var(--tile);
   padding-right: calc(var(--padding) + var(--tile));
-  /* width: var(--content-width); */
-  height: var(--tile);
-  background-color: var(--white);
+  min-height: var(--tile);
+  background-color: var(--gray-900);
   border-radius: var(--border-radius);
-  animation: var(--run-slower) var(--bounce) var(--now) forwards tile-in-b2t;
+  animation: var(--run-slower) var(--bounce) var(--now) forwards tile-in-t2b;
   &.closed {
-    animation: var(--run-slower) var(--bounce) var(--now) forwards tile-out-t2b;
+    animation: var(--run-slower) var(--bounce) var(--now) forwards tile-out-b2t;
+  }
+
+  @media (--s) {
+    width: 100%;
+    margin-top: var(--nav-height);
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 0;
   }
 }
 

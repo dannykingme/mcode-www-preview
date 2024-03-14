@@ -52,6 +52,18 @@ export default function Home() {
     <App>
       <div className="main">
         <div className="hero">
+          {showSuccessMessage && (
+            <div className="toast-wrapper">
+              <div className={cn('toast', { closed: closedSuccessMessage })}>
+                <div className="toast-message">
+                  Thanks for reaching out. We'll get back to you soon!
+                </div>
+                <button className="toast-action" onClick={handleClosedClick}>
+                  <Icon times />
+                </button>
+              </div>
+            </div>
+          )}
           <Header
             handleAboutClick={handleAboutClick}
             handleContactClick={handleContactClick}
@@ -73,19 +85,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-
-          {showSuccessMessage && (
-            <div className="toast-wrapper">
-              <div className={cn('toast', { closed: closedSuccessMessage })}>
-                <div className="toast-message">
-                  Thanks for reaching out. We'll get back to you soon!
-                </div>
-                <button className="toast-action" onClick={handleClosedClick}>
-                  <Icon times />
-                </button>
-              </div>
-            </div>
-          )}
         </div>
         <div className="content small" ref={aboutElement}>
           <h1>Rebuild, refactor, and modernize your entire codebase.</h1>
