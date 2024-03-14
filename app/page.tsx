@@ -119,7 +119,7 @@ export default function Home() {
 
         <div className="content contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
-          <p>(A human will respond, not an AI!)</p>
+          <p>(A human will respond, not an AI)</p>
           <ContactForm contactElement={contactElement} />
         </div>
       </div>
