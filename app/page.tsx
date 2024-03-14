@@ -126,7 +126,7 @@ export default function Home() {
           <p>We’re here to liberate your engineers to do their best work.</p>
         </div>
 
-        <div className="content small backed">
+        <div className="content small">
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
