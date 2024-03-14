@@ -15,7 +15,9 @@ export default function Header({ handleAboutClick, handleContactClick }) {
             <button onClick={handleAboutClick}>About</button>
           </div>
           <div className="nav-item">
-            <Link href="https://blog.modelcode.ai/">Blog</Link>
+            <Link href="https://blog.modelcode.ai/" target="_blank">
+              Blog
+            </Link>
           </div>
           <div className="nav-item">
             <button onClick={handleContactClick}>Contact</button>

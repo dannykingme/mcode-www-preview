@@ -141,11 +141,19 @@ export default function Home() {
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
-              <Link className="link" href="https://www.heroicvc.com/" />
+              <Link
+                className="link"
+                href="https://www.heroicvc.com/"
+                target="_blank"
+              />
             </div>
             <div className="backed-logo">
               <BessemerLogo />
-              <Link className="link" href="https://www.bvp.com/" />
+              <Link
+                className="link"
+                href="https://www.bvp.com/"
+                target="_blank"
+              />
             </div>
           </div>
         </div>
