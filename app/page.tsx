@@ -1,53 +1,14 @@
 'use client';
 
-import { useRef, RefObject, useEffect, useState, Suspense } from 'react';
+import { useRef, RefObject, Suspense } from 'react';
 import Link from 'next/link';
-import { useSearchParams, useRouter } from 'next/navigation';
-import cn from 'clsx';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Icon from '@/components/Icon';
 import App from '@/components/App';
 import ContactForm from '@/components/ContactForm';
+import Toast from '@/components/Toast';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
-
-function Toast() {
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-  const [searchParams] = useSearchParams();
-  const router = useRouter();
-
-  const [closedSuccessMessage, setclosedSuccessMessage] = useState(false);
-
-  useEffect(() => {
-    if (searchParams && searchParams[0] === 'submitted') {
-      setShowSuccessMessage(true);
-      router.push('/');
-    }
-  }, [searchParams]);
-
-  const handleClosedClick = () => {
-    setclosedSuccessMessage(true);
-  };
-
-  return (
-    <>
-      {showSuccessMessage && (
-        <div className="toast-wrapper">
-          <div className={cn('toast', { closed: closedSuccessMessage })}>
-            <div className="toast-message">
-              Thanks for reaching out. We’ll get back to you soon!
-            </div>
-            <button className="toast-action" onClick={handleClosedClick}>
-              {/* @ts-ignore */}
-              <Icon times />
-            </button>
-          </div>
-        </div>
-      )}
-    </>
-  );
-}
 
 export default function Home() {
   const aboutElement: RefObject<HTMLDivElement> = useRef(null);
