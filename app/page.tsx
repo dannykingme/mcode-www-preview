@@ -59,6 +59,7 @@ export default function Home() {
                   Thanks for reaching out. We'll get back to you soon!
                 </div>
                 <button className="toast-action" onClick={handleClosedClick}>
+                  {/* @ts-ignore */}
                   <Icon times />
                 </button>
               </div>
