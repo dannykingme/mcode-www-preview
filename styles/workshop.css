@@ -129,7 +129,7 @@
   /* animation: var(--run-slower) var(--fadein) 2s forwards to-blue; */
   &:hover {
     span {
-      color: var(--blue);
+      color: var(--gray-500);
       transition: color var(--run-slow);
     }
   }
