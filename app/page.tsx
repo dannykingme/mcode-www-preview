@@ -56,7 +56,7 @@ export default function Home() {
             <div className="toast-wrapper">
               <div className={cn('toast', { closed: closedSuccessMessage })}>
                 <div className="toast-message">
-                  Thanks for reaching out. We'll get back to you soon!
+                  Thanks for reaching out. We’ll get back to you soon!
                 </div>
                 <button className="toast-action" onClick={handleClosedClick}>
                   {/* @ts-ignore */}
