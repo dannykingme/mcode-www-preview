@@ -1,18 +1,13 @@
 'use client';
 
 import { useRef, RefObject, useEffect, useState, Suspense } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import cn from 'clsx';
-import scrollIntoView from 'scroll-into-view-if-needed';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Button from '@/components/Button';
 import Icon from '@/components/Icon';
 import App from '@/components/App';
-import Logo from '@/components/Logo';
-import FormField from '@/components/FormField';
 import ContactForm from '@/components/ContactForm';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
