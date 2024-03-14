@@ -385,7 +385,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  animation: var(--run-slower) var(--bounce) 5s forwards tile-out-t2b;
+  /* TODO(dk): decide is auto-dismiss is approriate */
+  /* animation: var(--run-slower) var(--bounce) 10s forwards tile-out-t2b; */
 }
 
 .toast {
@@ -404,6 +405,9 @@
   background-color: var(--white);
   border-radius: var(--border-radius);
   animation: var(--run-slower) var(--bounce) var(--now) forwards tile-in-b2t;
+  &.closed {
+    animation: var(--run-slower) var(--bounce) var(--now) forwards tile-out-t2b;
+  }
 }
 
 .toast-action {

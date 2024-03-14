@@ -3,7 +3,8 @@
 import { useRef, RefObject, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
+import cn from 'clsx';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -18,6 +19,7 @@ import BessemerLogo from '@/images/bessemer-logo.svg';
 
 export default function Home() {
   const [searchParams] = useSearchParams();
+  const router = useRouter();
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [closedSuccessMessage, setclosedSuccessMessage] = useState(false);
   const aboutElement: RefObject<HTMLDivElement> = useRef(null);
@@ -42,6 +44,7 @@ export default function Home() {
   useEffect(() => {
     if (searchParams && searchParams[0] === 'submitted') {
       setShowSuccessMessage(true);
+      router.push('/');
     }
   }, [searchParams]);
 
@@ -71,9 +74,9 @@ export default function Home() {
             </div>
           </div>
 
-          {showSuccessMessage && !closedSuccessMessage && (
+          {showSuccessMessage && (
             <div className="toast-wrapper">
-              <div className="toast">
+              <div className={cn('toast', { closed: closedSuccessMessage })}>
                 <div className="toast-message">
                   Thanks for reaching out. We'll get back to you soon!
                 </div>
