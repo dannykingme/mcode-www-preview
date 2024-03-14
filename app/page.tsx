@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, RefObject, useEffect, useState } from 'react';
+import { useRef, RefObject, useEffect, useState, Suspense } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
@@ -17,11 +17,44 @@ import ContactForm from '@/components/ContactForm';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
-export default function Home() {
+function Toast() {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [searchParams] = useSearchParams();
   const router = useRouter();
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const [closedSuccessMessage, setclosedSuccessMessage] = useState(false);
+
+  useEffect(() => {
+    if (searchParams && searchParams[0] === 'submitted') {
+      setShowSuccessMessage(true);
+      router.push('/');
+    }
+  }, [searchParams]);
+
+  const handleClosedClick = () => {
+    setclosedSuccessMessage(true);
+  };
+
+  return (
+    <>
+      {showSuccessMessage && (
+        <div className="toast-wrapper">
+          <div className={cn('toast', { closed: closedSuccessMessage })}>
+            <div className="toast-message">
+              Thanks for reaching out. We’ll get back to you soon!
+            </div>
+            <button className="toast-action" onClick={handleClosedClick}>
+              {/* @ts-ignore */}
+              <Icon times />
+            </button>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
+export default function Home() {
   const aboutElement: RefObject<HTMLDivElement> = useRef(null);
   const contactElement: RefObject<HTMLDivElement> = useRef(null);
 
@@ -37,34 +70,13 @@ export default function Home() {
     }
   };
 
-  const handleClosedClick = () => {
-    setclosedSuccessMessage(true);
-  };
-
-  useEffect(() => {
-    if (searchParams && searchParams[0] === 'submitted') {
-      setShowSuccessMessage(true);
-      router.push('/');
-    }
-  }, [searchParams]);
-
   return (
     <App>
       <div className="main">
         <div className="hero">
-          {showSuccessMessage && (
-            <div className="toast-wrapper">
-              <div className={cn('toast', { closed: closedSuccessMessage })}>
-                <div className="toast-message">
-                  Thanks for reaching out. We’ll get back to you soon!
-                </div>
-                <button className="toast-action" onClick={handleClosedClick}>
-                  {/* @ts-ignore */}
-                  <Icon times />
-                </button>
-              </div>
-            </div>
-          )}
+          <Suspense>
+            <Toast />
+          </Suspense>
           <Header
             handleAboutClick={handleAboutClick}
             handleContactClick={handleContactClick}
