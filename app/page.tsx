@@ -82,11 +82,6 @@ export default function Home() {
             handleContactClick={handleContactClick}
           />
           <div className="hero-content content">
-            {/* <div className="hero-media">
-              <div className="hero-logo">
-                <Logo />
-              </div>
-            </div> */}
             <div className="hero-paragraph">
               <span>Liberate</span>
               <span> engineers to do </span>
@@ -137,7 +132,6 @@ export default function Home() {
         </div>
 
         <div className="content small backed">
-          {/* <h4>Backed by</h4> */}
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
@@ -170,5 +164,3 @@ export default function Home() {
     </App>
   );
 }
-
-// Form reference: https://usebasin.com/guides/jamstack/react
