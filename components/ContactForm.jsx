@@ -6,6 +6,13 @@ import { useSearchParams } from 'next/navigation';
 import Button from '@/components/Button.js';
 import FormField from '@/components/FormField';
 
+const BASIN_TEST_FORM_ID = '56024030b3c4';
+const BASIN_LIVE_FORM_ID = '348457fd5b4c';
+const formId =
+  process.env.NODE_ENV === 'development'
+    ? BASIN_TEST_FORM_ID
+    : BASIN_LIVE_FORM_ID;
+
 export default function ContactForm({ contactElement }) {
   // const [searchParams] = useSearchParams();
   // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
@@ -20,7 +27,7 @@ export default function ContactForm({ contactElement }) {
   return (
     <form
       className="form"
-      action="https://usebasin.com/f/56024030b3c4"
+      action={`https://usebasin.com/f/${formId}`}
       method="POST"
       ref={contactElement}
     >
