@@ -376,3 +376,46 @@
     animation: var(--dur3) var(--fadein) var(--del3) backwards fade-in;
   }
 }
+
+.toast-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  animation: var(--run-slower) var(--bounce) 5s forwards tile-out-t2b;
+}
+
+.toast {
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* display: ; */
+  text-align: center;
+  margin: var(--margin);
+  padding: var(--xs) var(--tile);
+  padding-right: calc(var(--padding) + var(--tile));
+  /* width: var(--content-width); */
+  height: var(--tile);
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  animation: var(--run-slower) var(--bounce) var(--now) forwards tile-in-b2t;
+}
+
+.toast-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--tile);
+  height: var(--tile);
+  &:hover {
+    color: var(--gray-500);
+  }
+}

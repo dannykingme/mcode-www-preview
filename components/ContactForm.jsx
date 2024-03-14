@@ -14,16 +14,6 @@ const formId =
     : BASIN_LIVE_FORM_ID;
 
 export default function ContactForm({ contactElement }) {
-  // const [searchParams] = useSearchParams();
-  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-  // useEffect(() => {
-  //   console.log(searchParams);
-  //   if (searchParams.get('submitted')) {
-  //     setShowSuccessMessage(true);
-  //   }
-  // }, [searchParams]);
-
   return (
     <form
       className="form"
@@ -31,9 +21,6 @@ export default function ContactForm({ contactElement }) {
       method="POST"
       ref={contactElement}
     >
-      {/* {showSuccessMessage && (
-        <p>Thank you for submitting the form. We will get back to you soon!</p>
-      )} */}
       <FormField label="Name" name="name" required />
       <FormField label="Email" name="email" type="email" required />
       <FormField label="Organization" name="organization" />

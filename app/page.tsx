@@ -1,12 +1,14 @@
 'use client';
 
-import { useRef, RefObject } from 'react';
+import { useRef, RefObject, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import scrollIntoView from 'scroll-into-view-if-needed';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Button from '@/components/Button.js';
+import Button from '@/components/Button';
+import Icon from '@/components/Icon';
 import App from '@/components/App';
 import Logo from '@/components/Logo';
 import FormField from '@/components/FormField';
@@ -15,29 +17,34 @@ import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
 export default function Home() {
+  const [searchParams] = useSearchParams();
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [closedSuccessMessage, setclosedSuccessMessage] = useState(false);
   const aboutElement: RefObject<HTMLDivElement> = useRef(null);
   const contactElement: RefObject<HTMLDivElement> = useRef(null);
-  // console.log(contactElement?.current);
-  // const handleContactClick = () => {
-  //   requestAnimationFrame(() => {
-  //     scrollIntoView(contactElement?.current, {
-  //       scrollMode: 'always',
-  //       block: 'start',
-  //       inline: 'start',
-  //       behavior: 'smooth',
-  //     });
-  //   });
-  // };
+
   const handleAboutClick = () => {
     if (aboutElement.current) {
       aboutElement.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const handleContactClick = () => {
     if (contactElement.current) {
       contactElement.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const handleClosedClick = () => {
+    setclosedSuccessMessage(true);
+  };
+
+  useEffect(() => {
+    if (searchParams && searchParams[0] === 'submitted') {
+      setShowSuccessMessage(true);
+    }
+  }, [searchParams]);
+
   return (
     <App>
       <div className="main">
@@ -63,6 +70,19 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          {showSuccessMessage && !closedSuccessMessage && (
+            <div className="toast-wrapper">
+              <div className="toast">
+                <div className="toast-message">
+                  Thanks for reaching out. We'll get back to you soon!
+                </div>
+                <button className="toast-action" onClick={handleClosedClick}>
+                  <Icon times />
+                </button>
+              </div>
+            </div>
+          )}
         </div>
         <div className="content small" ref={aboutElement}>
           <h1>Rebuild, refactor, and modernize your entire codebase.</h1>
