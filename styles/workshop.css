@@ -23,7 +23,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(var(--xl) * 2);
     margin-top: var(--margin);
     .aff {
       width: 100%;
@@ -55,6 +54,7 @@
 }
 
 .form {
+  width: 100%;
   max-width: 100%;
   .aff {
     margin-bottom: var(--margin);

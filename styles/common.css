@@ -45,6 +45,10 @@
   &.small {
     max-width: calc(var(--xl) * 3);
   }
+
+  &.tiny {
+    max-width: calc(var(--xl) * 2);
+  }
 }
 
 .flex {

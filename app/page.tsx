@@ -50,7 +50,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="content small" ref={aboutElement}>
+        <div className="content tiny" ref={aboutElement}>
           <h1>Modernize your entire codebase.</h1>
           <p>
             We’re a team of AI experts and veteran engineers from Google, Apple,
@@ -72,7 +72,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="content small">
+        <div className="content">
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
@@ -95,7 +95,7 @@ export default function Home() {
 
         <hr />
 
-        <div className="content contact-form" ref={contactElement}>
+        <div className="content tiny contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
           <p>(A human will respond, not an AI)</p>
           <ContactForm contactElement={contactElement} />
