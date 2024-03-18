@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import App from '@/components/App';
 import ContactForm from '@/components/ContactForm';
 import Toast from '@/components/Toast';
+import Hyperlink from '@/components/Link';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
@@ -68,11 +69,11 @@ export default function Home() {
             your time, budget, and resources for more meaningful projects.
           </p>
           <p>
-            Try modelcode today. Liberate your engineers to do their best work.
+            <button className="hyperlink" onClick={handleContactClick}>
+              Try modelcode
+            </button>{' '}
+            today. Liberate your engineers to do their best work.
           </p>
-        </div>
-
-        <div className="content">
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
