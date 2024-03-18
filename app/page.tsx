@@ -51,40 +51,25 @@ export default function Home() {
           </div>
         </div>
         <div className="content small" ref={aboutElement}>
-          <h1>Rebuild, refactor, and modernize your entire codebase.</h1>
+          <h1>Modernize your entire codebase.</h1>
           <p>
-            We are a group of serial software VC-backed entrepreneurs, with a
-            track record of successful exits. We have worked together before. We
-            are AI experts.
+            We’re a team of AI experts and veteran engineers from Google, Apple,
+            and Meta. We have a history of founding successful AI ventures, and
+            we are on a mission to make manual code modernization obsolete.
           </p>
-
           <p>
-            Over the decades, we have built and rebuilt and re-rebuilt a lot of
-            software platforms. We have suffered while refactoring enormous code
-            bases at both mega cap and startup companies. We have been in the
-            trenches rebuilding and translating and annotating and unit testing
-            old code, bad code, incomprehensible code.
+            We know what it’s like to spend months paying off massive tech debt
+            at the expense of product innovation. Every member of our team has
+            served in the trenches tediously rebuilding, translating,
+            annotating, and unit testing countless lines of legacy code.
           </p>
-
           <p>
-            We have led teams of engineers — our best engineers, our best
-            friends, our best hires, our most valuable players — who have been
-            forced to pay off massive tech debt instead of being liberated to
-            create beautiful new products and features for customers and users.
-            We have face-palmed and banged our heads on our keyboards in late
-            night translation sessions and architecture reviews in thankless
-            pursuit of just...fixing...this...crappy...old...code.
+            We’re here to finish the war on outdated code, so you can free up
+            your time, budget, and resources for more meaningful projects.
           </p>
-
-          <p>You know what we’re talking about. You’ve been there, too.</p>
-
           <p>
-            We decided to vanquish this problem. We at modelcode.ai are solving
-            this problem with AI so you never need to spend another minute with
-            your best resources and precious budget focusing on fixing the
-            legacy problems of the past.
+            Try modelcode today. Liberate your engineers to do their best work.
           </p>
-          <p>We’re here to liberate your engineers to do their best work.</p>
         </div>
 
         <div className="content small">
