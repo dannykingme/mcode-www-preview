@@ -22,9 +22,9 @@ const Shapes = ({ className, ...rest }) => (
 );
 
 const Icon = ({ name, inline, style, className, ...rest }) => {
+  let id = iconName;
   const { warn } = console;
   const iconName = Object.keys(rest)[0];
-  let id = iconName;
 
   if (name) {
     id = name;
