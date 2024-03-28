@@ -34,8 +34,8 @@ export default function McodeLogo() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 500 400"
     >
-      <Path className="line line-1" d="M250,350H50" />
       <Path className="line line-2" d="M250,363L50,200" />
+      <Path className="line line-1" d="M250,350H50" />
       <Path className="line line-3" d="M250,350L50,50" />
       <Path className="line line-4" d="M250,350L450,50" />
       <Path className="line line-5" d="M250,363l200-163" />
