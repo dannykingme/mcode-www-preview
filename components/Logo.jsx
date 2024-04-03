@@ -38,6 +38,7 @@ export default function McodeLogo() {
       <Path className="line line-2" d="M250,363L50,200" />
       <Path className="line line-3" d="M250,350L50,50" />
       <Path className="line line-4" d="M250,350L450,50" />
+      <Path className="line line-6" d="M250,350h200" />
       <Path className="line line-5" d="M250,363l200-163" />
       <Path className="line line-6" d="M250,350h200" />
 
