@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Inter } from 'next/font/google';
-import { GoogleTagManager } from '@next/third-parties/google';
+import Script from 'next/script';
 import cn from 'clsx';
 import '@/styles/app.css';
 
@@ -32,7 +32,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(dmSans.variable, inter.variable)}>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID as string} />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GA_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-${process.env.NEXT_PUBLIC_GA_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
       <body>{children}</body>
     </html>
   );
