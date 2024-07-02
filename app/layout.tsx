@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans, Inter } from 'next/font/google';
+import { GoogleTagManager } from '@next/third-parties/google';
 import cn from 'clsx';
 import '@/styles/app.css';
 
@@ -31,6 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(dmSans.variable, inter.variable)}>
+      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GA_ID as string} />
       <body>{children}</body>
     </html>
   );
