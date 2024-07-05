@@ -2,22 +2,37 @@ import cn from 'clsx';
 import Link from '@/components/Link';
 import Icon from '@/components/Icon';
 
-const ButtonText = ({ text, icon }) => {
+interface ButtonTextProps {
+  text?: string;
+  icon?: string;
+}
+
+const ButtonText: React.FC<ButtonTextProps> = ({ text, icon }) => {
   return text || icon ? (
     <>
-      {icon ? <Icon name={icon} /> : false}
-      {text ? <span>{text}</span> : false}
+      {icon ? <Icon name={icon} /> : null}
+      {text ? <span>{text}</span> : null}
     </>
-  ) : (
-    false
-  );
+  ) : null;
 };
 
-// mode?: 'default' | 'filled' | 'outlined' | 'ghost'
-// tone?: 'default' | 'normal' | 'positive' | 'caution' | 'critical'
-// theme?: 'default' | 'light' | 'dark'
+interface ButtonProps {
+  className?: string;
+  mode?: 'default' | 'filled' | 'outlined' | 'ghost';
+  tone?: 'default' | 'normal' | 'positive' | 'caution' | 'critical';
+  theme?: 'default' | 'light' | 'dark';
+  text?: string;
+  icon?: string;
+  href?: string;
+  target?: string;
+  disabled?: boolean;
+  children?: React.ReactNode;
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
+  style?: React.CSSProperties;
+  type?: 'button' | 'submit' | 'reset';
+}
 
-const Button = ({
+const Button: React.FC<ButtonProps> = ({
   className,
   mode = 'default',
   tone = 'default',
@@ -51,7 +66,7 @@ const Button = ({
   );
   const textButtonProps = {
     className: classNames,
-    href,
+    href: href || '',
     onClick,
     style,
     disabled,
@@ -87,6 +102,7 @@ const Button = ({
       </div>
     );
   }
+  return null;
 };
 
 export default Button;
