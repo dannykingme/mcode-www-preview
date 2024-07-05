@@ -13,7 +13,7 @@ const formId =
     ? BASIN_TEST_FORM_ID
     : BASIN_LIVE_FORM_ID;
 
-export default function ContactForm({ contactElement }) {
+export default function ContactForm({ contactElement = null }) {
   return (
     <form
       className="form"
