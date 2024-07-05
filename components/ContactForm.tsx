@@ -13,13 +13,12 @@ const formId =
     ? BASIN_TEST_FORM_ID
     : BASIN_LIVE_FORM_ID;
 
-export default function ContactForm({ contactElement = null }) {
+export default function ContactForm() {
   return (
     <form
       className="form"
       action={`https://usebasin.com/f/${formId}`}
       method="POST"
-      ref={contactElement}
     >
       <FormField label="Name" name="name" required />
       <FormField label="Email" name="email" type="email" required />

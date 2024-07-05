@@ -99,7 +99,7 @@ export default function Home() {
         <div className="content tiny contact-form" ref={contactElement}>
           <h1>Let’s chat.</h1>
           <p>(A human will respond, not an AI)</p>
-          <ContactForm contactElement={contactElement} />
+          <ContactForm />
         </div>
       </div>
       <Footer handleAboutClick={handleAboutClick} />
