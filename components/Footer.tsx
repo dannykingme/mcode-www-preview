@@ -1,7 +1,11 @@
 import Link from '@/components/Link';
 import Logo from '@/components/Logo';
 
-export default function Footer({ handleAboutClick }) {
+interface FooterProps {
+  handleAboutClick?: () => void;
+}
+
+export default function Footer({ handleAboutClick = undefined }: FooterProps) {
   return (
     <footer className="footer">
       <div className="nav content">
