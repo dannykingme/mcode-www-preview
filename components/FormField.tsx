@@ -326,8 +326,7 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
               tabIndex={-1}
               title="Clear"
             >
-              {/* @ts-expect-error */}
-              <Icon times />
+              <Icon name="times" />
             </button>
           </div>
         )}
@@ -340,8 +339,7 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
               tabIndex={-1}
               title={state.reveal ? 'Hide characters' : 'Reveal characters'}
             >
-              {/* @ts-expect-error */}
-              {state.reveal ? <Icon hide /> : <Icon reveal />}
+              {state.reveal ? <Icon name="hide" /> : <Icon name="reveal" />}
             </button>
           </div>
         )}
