@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation';
-import Button from '@/components/Button.js';
+import Button from '@/components/Button';
 import FormField from '@/components/FormField';
 
 const BASIN_TEST_FORM_ID = '56024030b3c4';
