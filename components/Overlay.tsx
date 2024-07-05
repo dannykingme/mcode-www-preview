@@ -77,7 +77,17 @@ export const MenuOverlay = ({ close, title, images }: MenuOverlayProps) => {
 
 export const OpenMenu = () => (
   <PortalWithState closeOnOutsideClick closeOnEsc>
-    {({ openPortal, closePortal, isOpen, portal }) => [
+    {({
+      openPortal,
+      closePortal,
+      isOpen,
+      portal,
+    }: {
+      openPortal: () => void;
+      closePortal: () => void;
+      isOpen: boolean;
+      portal: (children: React.ReactNode) => React.ReactNode;
+    }) => [
       <button
         className="menu-button"
         onClick={openPortal}
