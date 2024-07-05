@@ -1,49 +1,77 @@
 import classNames from 'clsx';
-import BodyClassName from 'react-body-classname';
 import { PortalWithState } from 'react-portal';
 import Icon from '@/components/Icon';
 import Link from '@/components/Link';
+import { ReactNode, MouseEvent, useEffect } from 'react';
 
-export const Overlay = ({ children, className, close, ...rest }) => {
-  const handleClick = (e) => {
+interface OverlayProps {
+  children: ReactNode;
+  className?: string;
+  close?: () => void;
+  [key: string]: any;
+}
+
+const useBodyClassName = (className: string) => {
+  useEffect(() => {
+    document.body.classList.add(className);
+    return () => {
+      document.body.classList.remove(className);
+    };
+  }, [className]);
+};
+
+export const Overlay = ({
+  children,
+  className,
+  close,
+  ...rest
+}: OverlayProps) => {
+  useBodyClassName('overlaying');
+
+  const handleClick = (e: MouseEvent<HTMLDivElement | HTMLButtonElement>) => {
     e.stopPropagation();
     if (close) {
       close();
     }
   };
+
   return (
-    <BodyClassName className="overlaying">
-      <div className={classNames('overlay', className)} {...rest}>
-        <div className={classNames('overlay-background')} />
-        <div className={classNames('overlay-foreground')} onClick={handleClick}>
-          {children}
-          <button
-            className="overlay-action"
-            disabled={!close}
-            onClick={handleClick}
-          >
-            <div className="overlay-action-title">Close</div>
-            <div className="overlay-action-icon">
-              <Icon times />
-            </div>
-          </button>
-        </div>
+    <div className={classNames('overlay', className)} {...rest}>
+      <div className={classNames('overlay-background')} />
+      <div className={classNames('overlay-foreground')} onClick={handleClick}>
+        {children}
+        <button
+          className="overlay-action"
+          disabled={!close}
+          onClick={handleClick}
+        >
+          <div className="overlay-action-title">Close</div>
+          <div className="overlay-action-icon">
+            <Icon name="times" />
+          </div>
+        </button>
       </div>
-    </BodyClassName>
+    </div>
   );
 };
 
-export const MenuOverlay = ({ close, title, images }) => {
+interface MenuOverlayProps {
+  close?: () => void;
+  title?: string;
+  images?: string[];
+}
+
+export const MenuOverlay = ({ close, title, images }: MenuOverlayProps) => {
+  useBodyClassName('overlaying overlaying-menu');
+
   return (
-    <BodyClassName className="overlaying overlaying-menu">
-      <div className="menu">
-        <div className="menu-items">
-          <Link className="menu-item" href="/about">
-            About
-          </Link>
-        </div>
+    <div className="menu">
+      <div className="menu-items">
+        <Link className="menu-item" href="/about">
+          About
+        </Link>
       </div>
-    </BodyClassName>
+    </div>
   );
 };
 
@@ -55,7 +83,7 @@ export const OpenMenu = () => (
         onClick={openPortal}
         key="menu-button-key"
       >
-        <Icon menu />
+        <Icon name="menu" />
       </button>,
       portal(<MenuOverlay close={closePortal} />),
     ]}
