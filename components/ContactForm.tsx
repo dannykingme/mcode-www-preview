@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 // import { useRouter } from 'next/router';
 import { useSearchParams } from 'next/navigation';
-import Button from '@/components/Button.js';
+import Button from '@/components/Button';
 import FormField from '@/components/FormField';
 
 const BASIN_TEST_FORM_ID = '56024030b3c4';
@@ -13,13 +13,12 @@ const formId =
     ? BASIN_TEST_FORM_ID
     : BASIN_LIVE_FORM_ID;
 
-export default function ContactForm({ contactElement }) {
+export default function ContactForm() {
   return (
     <form
       className="form"
       action={`https://usebasin.com/f/${formId}`}
       method="POST"
-      ref={contactElement}
     >
       <FormField label="Name" name="name" required />
       <FormField label="Email" name="email" type="email" required />
