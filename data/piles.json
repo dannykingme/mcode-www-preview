@@ -131,5 +131,7 @@
   "chevron-left": ["stroke-chevron-left"],
   "chevron-right": ["stroke-chevron-right"],
   "bookmark": ["stroke-bookmark"],
-  "bookmarked": ["stroke-bookmark", "fill-bookmark"]
+  "bookmarked": ["stroke-bookmark", "fill-bookmark"],
+  "external": ["stroke-external"],
+  "mcode-logo": ["fill-mcode-logo"]
 }
