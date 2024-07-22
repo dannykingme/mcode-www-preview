@@ -12,7 +12,7 @@ export default function ContactPage() {
     <App>
       <Header />
       <div className="main">
-        <div className="content small">
+        <div className="content tiny">
           <h1>Modernize your entire codebase.</h1>
           <p>
             We’re a team of AI experts and veteran engineers from Google, Apple,
@@ -33,7 +33,9 @@ export default function ContactPage() {
             <button className="hyperlink">Try modelcode</button> today. Liberate
             your engineers to do their best work.
           </p>
-          <h1>Leadership</h1>
+        </div>
+        <div className="content small">
+          <h2>Leadership team</h2>
           <div className="headshots">
             <div className="headshot">
               <div className="headshot-media">
@@ -81,7 +83,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-          <h1>Investors</h1>
+          <h2>Our investors</h2>
           <div className="backed-logos">
             <div className="backed-logo">
               <HeroicLogo />
@@ -100,7 +102,7 @@ export default function ContactPage() {
               />
             </div>
           </div>
-          <h1>Board</h1>
+          <h2>The board</h2>
           <div className="headshots">
             <div className="headshot">
               <div className="headshot-media">

@@ -299,7 +299,7 @@
 .backed-logos {
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   gap: calc(var(--tile) * 1.5);
   margin-top: calc(var(--tile) * 1);
   margin-bottom: calc(var(--tile) * 2);
@@ -1189,8 +1189,9 @@ h6,
 
 .headshots {
   display: flex;
+  justify-content: center;
   gap: var(--margin);
-  margin: calc(var(--tile) * 1) 0 calc(var(--tile) * 2);
+  margin: calc(var(--margin) * 1) 0 calc(var(--tile) * 2);
 }
 
 .headshot {
@@ -1273,4 +1274,11 @@ h6,
       var(--xs) var(--xs),
     linear-gradient(var(--black), var(--black)) 100%;
   border-radius: var(--padding);
+}
+
+.about-page {
+  h2 {
+    text-align: center;
+    margin-top: var(--xl);
+  }
 }
