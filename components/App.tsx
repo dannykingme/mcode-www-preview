@@ -19,6 +19,7 @@ const App: React.FC<AppProps> = ({ children }) => {
         'home-page': pathname === '/',
         'about-page': pathname === '/about',
         'contact-page': pathname === '/contact',
+        'press-page': pathname === '/press',
       })}
     >
       {children}
