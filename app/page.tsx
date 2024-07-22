@@ -339,7 +339,7 @@ export default function Home() {
         <div className="articles-container">
           <div className="content">
             <div className="articles-heading">
-              <h1>Latest news</h1>
+              <h1>Latest research</h1>
             </div>
             <div className="articles">
               <div className="article">
