@@ -19,6 +19,9 @@
         animation-delay: 0ms;
       }
     }
+    .main {
+      padding-top: var(--tile);
+    }
   }
 }
 
