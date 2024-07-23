@@ -19,6 +19,8 @@ import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
 
+const basePath = '/mcode-www-preview';
+
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
 //   `issues=[] if 'TODO' in line: issues.append(f"Line {idx}: TODO found") if len(line) > 80:`,
@@ -183,7 +185,7 @@ export default function Home() {
           </div>
           <div className="meet-media">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/diff.png`}
+              src={`${basePath}/images/diff.png`}
               width={1024}
               height={768}
               alt="Modelcode review tool"
