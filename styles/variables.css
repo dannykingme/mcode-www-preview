@@ -64,11 +64,12 @@
    *                                Typography                               *
    * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-  --font-sans: var(--font-dm-sans);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-dm-sans);
   --font-serif: var(--font-merriweather);
-  --font-mono: var(--font-roboto-mono);
+  --font-mono: var(--font-dm-mono);
   --font-cond: var(--font-roboto-condensed);
-  --font-copy: var(--font-inter);
+  /* --font-copy: var(--font-inter); */
   --font-weight: 400;
   --font-size: 16px;
   --font-tiny: 13px;

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { DM_Sans, Inter } from 'next/font/google';
+import { DM_Sans, DM_Mono, Inter } from 'next/font/google';
 import Script from 'next/script';
 import cn from 'clsx';
 import '@/styles/app.css';
@@ -10,6 +10,14 @@ const dmSans = DM_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-dm-sans',
+});
+
+const dmMono = DM_Mono({
+  weight: ['400', '500'],
+  style: ['normal'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-mono',
 });
 
 const inter = Inter({
@@ -31,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(dmSans.variable, inter.variable)}>
+    <html
+      lang="en"
+      className={cn(dmSans.variable, dmMono.variable, inter.variable)}
+    >
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.NEXT_PUBLIC_GA_ID}`}
         strategy="afterInteractive"
