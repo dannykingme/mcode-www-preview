@@ -15,7 +15,7 @@ export default function Toast() {
       setShowSuccessMessage(true);
       router.push('/');
     }
-  }, [searchParams]);
+  }, [searchParams, router]);
 
   const handleClosedClick = () => {
     setclosedSuccessMessage(true);

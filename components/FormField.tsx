@@ -96,7 +96,7 @@ const FormField = forwardRef<HTMLInputElement, FormFieldProps>(
           empty: value === '',
         }));
       }
-    }, [value]);
+    }, [value, state.value]);
 
     const handleChange = (event: any) => {
       setState((oldState) => ({

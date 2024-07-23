@@ -197,7 +197,7 @@ export default function Home() {
             <div className="meet-icon">
               <Icon name="mcode-logo" />
             </div>
-            <h2>That's why we built Modelcode AI.</h2>
+            <h2>That’s why we built Modelcode AI.</h2>
             {/* <p>
               We’re here to finish the war on outdated code, so you can free up
               your time amd budget for something more meaningful.
@@ -262,9 +262,9 @@ export default function Home() {
               <h2>Eliminate doubt with our unique review process.</h2>
               {/* <hr /> */}
               <p>
-                We're not interested in smoke and mirrors. You have real code
+                We’re not interested in smoke and mirrors. You have real code
                 and it needs to work. We expect your engineers to review
-                everything and we're confident they'll be impressed.
+                everything and we’re confident they’ll be impressed.
               </p>
             </div>
           </div>
@@ -292,7 +292,7 @@ export default function Home() {
               <h2>Docs for everything, everywhere, all at once.</h2>
               {/* <hr /> */}
               <p>
-                Don't worry about it. Modelcode generates detailed documentation
+                Don’t worry about it. Modelcode generates detailed documentation
                 for every line of code it writes. We want your team to onboard
                 and collaborate with each other without stress.
               </p>
@@ -423,7 +423,7 @@ export default function Home() {
                 Legacy code is expensive,
               </div>
               {/* <div className="codeline-copy-line" /> */}
-              <div className="codeline-copy-line">let's fix it.</div>
+              <div className="codeline-copy-line">let’s fix it.</div>
               <div className="codeline-copy-line" ref={lineElement} />
               {/* <div className="codeline-copy-line" /> */}
               {/* <div className="codeline-copy-line">Get started.</div> */}
