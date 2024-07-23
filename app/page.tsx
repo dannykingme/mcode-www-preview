@@ -183,7 +183,7 @@ export default function Home() {
           </div>
           <div className="meet-media">
             <Image
-              src="/images/diff.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/diff.png`}
               width={1024}
               height={768}
               alt="Modelcode review tool"
