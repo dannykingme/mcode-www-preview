@@ -2,7 +2,6 @@
 const nextConfig = {
   basePath: '',
   output: 'export',
-  distDir: 'out',
   reactStrictMode: true,
   images: { unoptimized: true },
   webpack: (config, { isServer }) => {
