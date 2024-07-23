@@ -18,10 +18,6 @@ import IlloEnterprise from '@/images/enterprise.svg';
 import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
-import getConfig from 'next/config';
-
-const { publicRuntimeConfig } = getConfig();
-const basePath = publicRuntimeConfig.basePath || '';
 
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
@@ -187,7 +183,7 @@ export default function Home() {
           </div>
           <div className="meet-media">
             <Image
-              src={`${basePath}/images/diff.png`}
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH}/images/diff.png`}
               width={1024}
               height={768}
               alt="Modelcode review tool"

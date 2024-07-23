@@ -1,6 +1,6 @@
 // Next.js configuration with custom Webpack for SVG handling
 const nextConfig = {
-  basePath: '/mcode-www-preview',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   output: 'export',
   reactStrictMode: true,
   images: { unoptimized: true },
