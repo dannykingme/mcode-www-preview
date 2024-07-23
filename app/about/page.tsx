@@ -7,6 +7,8 @@ import Link from '@/components/Link';
 import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
+import { basePath } from '@/lib/constants';
+
 export default function ContactPage() {
   return (
     <App>
@@ -40,7 +42,7 @@ export default function ContactPage() {
             <div className="headshot">
               <div className="headshot-media">
                 <Image
-                  src="/images/michael.png"
+                  src={`${basePath}/images/michael.png`}
                   width={640}
                   height={640}
                   alt="Michael Fertik"
@@ -55,7 +57,7 @@ export default function ContactPage() {
             <div className="headshot">
               <div className="headshot-media">
                 <Image
-                  src="/images/shiv.png"
+                  src={`${basePath}/images/shiv.png`}
                   width={640}
                   height={640}
                   alt="Shiv Prakash"
@@ -70,7 +72,7 @@ export default function ContactPage() {
             <div className="headshot">
               <div className="headshot-media">
                 <Image
-                  src="/images/antoine.png"
+                  src={`${basePath}/images/antoine.png`}
                   width={640}
                   height={640}
                   alt="Antoine Raux"
@@ -107,7 +109,7 @@ export default function ContactPage() {
             <div className="headshot">
               <div className="headshot-media">
                 <Image
-                  src="/images/michael.png"
+                  src={`${basePath}/images/michael.png`}
                   width={224}
                   height={224}
                   alt="Michael Fertik"
@@ -122,7 +124,7 @@ export default function ContactPage() {
             <div className="headshot">
               <div className="headshot-media">
                 <Image
-                  src="/images/david.png"
+                  src={`${basePath}/images/david.png`}
                   width={224}
                   height={224}
                   alt="David Cowan"

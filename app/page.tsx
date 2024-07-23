@@ -19,7 +19,7 @@ import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
 
-const basePath = '/mcode-www-preview';
+import { basePath } from '@/lib/constants';
 
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
