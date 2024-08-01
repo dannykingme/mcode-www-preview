@@ -97,7 +97,7 @@ export default function Home() {
   const codeElement: RefObject<HTMLDivElement> = useRef(null);
   const lineElement: RefObject<HTMLDivElement> = useRef(null);
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isOutroVisible, setIsOutroVisible] = useState(true);
 
   const handleAboutClick = () => {
     if (aboutElement.current) {
@@ -123,14 +123,14 @@ export default function Home() {
       if (codeElement.current && lineElement.current) {
         const rect = codeElement.current.getBoundingClientRect();
         const rect2 = lineElement.current.getBoundingClientRect();
-        const isVisible =
+        const isOutroVisible =
           rect2.top < window.innerHeight - margin && rect2.bottom > 0;
         const isInvisible = rect.top >= window.innerHeight;
 
-        if (isVisible) {
-          setIsVisible(true);
+        if (isOutroVisible) {
+          setIsOutroVisible(true);
         } else if (isInvisible) {
-          setIsVisible(false);
+          setIsOutroVisible(false);
         }
       }
     };
@@ -392,7 +392,7 @@ export default function Home() {
         <div className="codelines-container">
           <div
             className={cn('codelines', {
-              visible: isVisible,
+              visible: isOutroVisible,
             })}
             ref={codeElement}
           >
