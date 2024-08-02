@@ -517,15 +517,20 @@ export default function Home() {
               <div className="codeline-copy-line" />
               <div className="codeline-copy-line" />
               <div className="codeline-copy-line">
-                Legacy code is expensive,
+                <span className="codeline-white-top">
+                  Legacy code is expensive,
+                </span>
               </div>
               {/* <div className="codeline-copy-line" /> */}
-              <div className="codeline-copy-line">let’s fix it.</div>
+              <div className="codeline-copy-line">
+                <span className="codeline-white-bottom">let’s fix it.</span>
+              </div>
               <div className="codeline-copy-line" ref={lineElement} />
               {/* <div className="codeline-copy-line" /> */}
               {/* <div className="codeline-copy-line">Get started.</div> */}
               {/* <Button mode="filled" theme="dark" text="Get started." /> */}
               <Button
+                className="codeline-button"
                 mode="filled"
                 theme="dark"
                 text="Get started."
