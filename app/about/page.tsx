@@ -8,6 +8,7 @@ import HeroicLogo from '@/images/heroic-logo.svg';
 import BessemerLogo from '@/images/bessemer-logo.svg';
 
 import { basePath } from '@/lib/constants';
+import Button from '@/components/Button';
 
 export default function ContactPage() {
   return (
@@ -31,10 +32,10 @@ export default function ContactPage() {
             We’re here to finish the war on outdated code, so you can free up
             your time, budget, and resources for more meaningful projects.
           </p>
-          <p>
-            <button className="hyperlink">Try modelcode</button> today. Liberate
-            your engineers to do their best work.
-          </p>
+          <p>Liberate your engineers to do their best work.</p>
+          <div className="buttons">
+            <Button href="/contact" text="Try Modelcode." />
+          </div>
         </div>
         <div className="content small">
           <h2>Leadership team</h2>
