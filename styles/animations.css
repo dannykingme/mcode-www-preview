@@ -430,12 +430,12 @@
       calc((var(--dur10) * 0.55) + var(--del10)) both fade-in;
   }
 
-  .dff-react-tag {
+  .dff-branch-tag {
     animation: var(--dur11) var(--bounce)
       calc((var(--dur11) * 0.34) + var(--del11)) both grow-in;
   }
 
-  .dff-react {
+  .dff-branch {
     animation: var(--dur12) var(--fadein)
       calc((var(--dur12) * 0.55) + var(--del12)) both fade-in;
   }

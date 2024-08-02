@@ -9,14 +9,14 @@
   <path class="dff-label-pill" d="M146.73,153.13h-38.73c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12h38.73c6.63,0,12,5.37,12,12h0c0,6.63-5.37,12-12,12Z"/>
   <text class="dff-label dff-text" x="111.84" y="144.85">Open</text>
   <text class="dff-user dff-text" x="166.12" y="144.87">mcode-bot wants to merge</text>
-  <text class="dff-action dff-text" x="379.22" y="144.87">commits into  main  from  angular-to-react</text>
+  <text class="dff-action dff-text" x="379.22" y="144.87">commits into  main  from  modelcode-ai</text>
   <text class="dff-count dff-text" x="324.23" y="145.2">144,000</text>
   <path class="dff-master-tag dff-tag" d="M484.57,149.44h-25.32c-2.76,0-5-2.24-5-5v-6c0-2.76,2.24-5,5-5h25.32c2.76,0,5,2.24,5,5v6c0,2.76-2.24,5-5,5Z"/>
   <text class="dff-master dff-text" x="458.47" y="144.87">main</text>
-  <path class="dff-react-tag dff-tag" d="M616.72,149.44h-89.48c-2.76,0-5-2.24-5-5v-6c0-2.76,2.24-5,5-5h89.48c2.76,0,5,2.24,5,5v6c0,2.76-2.24,5-5,5Z"/>
-  <text class="dff-react dff-text" x="525.69" y="144.87">angular-to-react</text>
+  <path class="dff-branch-tag dff-tag" d="M602.48,149.44h-75.44c-2.76,0-5-2.24-5-5v-6c0-2.76,2.24-5,5-5h75.44c2.76,0,5,2.24,5,5v6c0,2.76-2.24,5-5,5Z"/>
+  <text class="dff-branch dff-text" x="525.69" y="144.87">modelcode-ai</text>
   <path class="dff-divider" d="M64,185.13h640"/>
-  
+
   <path class="dff-left-lines dff-lines" d="M380.6,221.13v290.87H96.6V221.13c0-2.21,1.79-4,4-4h276c2.21,0,4,1.79,4,4Z"/>
   <path class="dff-left-hi-8 dff-hi" d="M380.6,413.13H96.6v-24h284v24Z"/>
   <path class="dff-left-hi-7 dff-hi" d="M380.6,389.13H96.6v-24h284v24Z"/>
@@ -34,7 +34,7 @@
   <path class="dff-left-line-10 dff-line" d="M344.33,457.13H108.6c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-left-line-11 dff-line" d="M238.01,481.13H108.6c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-left-line-12 dff-line" d="M158.11,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  
+
   <path class="dff-right-lines dff-lines" d="M672,221.13v290.87h-284V221.13c0-2.21,1.79-4,4-4h276c2.21,0,4,1.79,4,4Z"/>
   <path class="dff-right-highlight-8 dff-hi" d="M672,413.13h-284v-24h284v24Z"/>
   <path class="dff-right-highlight-7 dff-hi" d="M672,389.13h-284v-24h284v24Z"/>
@@ -49,10 +49,10 @@
   <path class="dff-right-line-7 dff-line" d="M545.75,385.13h-145.75c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h145.75c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-8 dff-line" d="M529.41,409.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-9 dff-line" d="M653.97,433.13h-253.97c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h253.97c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-10 dff-line" d="M635.73,457.13h-235.73c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-11 dff-line" d="M529.41,481.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-12 dff-line" d="M449.51,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-13 dff-line" d="M551.88,529.13h-151.88c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h151.88c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-14 dff-line" d="M623.45,553.13h-223.45c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h223.45c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-15 dff-line" d="M479.59,577.13h-79.59c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h79.59c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-10 dff-line" d="M635.73,457.13h-235.73c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-11 dff-line" d="M529.41,481.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-12 dff-line" d="M449.51,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-13 dff-line" d="M551.88,529.13h-151.88c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h151.88c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-14 dff-line" d="M623.45,553.13h-223.45c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h223.45c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-15 dff-line" d="M479.59,577.13h-79.59c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h79.59c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
 </svg>

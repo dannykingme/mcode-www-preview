@@ -15,8 +15,8 @@ import IlloWriting from '@/images/writing.svg';
 import IlloCode from '@/images/code.svg';
 import IlloSecurity from '@/images/security.svg';
 import IlloEnterprise from '@/images/enterprise.svg';
-import ArtDiff from '@/images/art-diff.svg';
-import ArtDiffSpacer from '@/images/art-diff-spacer.svg';
+import Diff from '@/images/diff.svg';
+import DiffSpacer from '@/images/diff-spacer.svg';
 import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
@@ -221,10 +221,10 @@ export default function Home() {
                   <div className="dff-aura-2 dff-aura" />
                 </div>
                 <div className="dff-shadow" />
-                <ArtDiff width={1280} />
+                <Diff width={1280} />
               </div>
             ) : (
-              <ArtDiffSpacer width={1280} />
+              <DiffSpacer width={1280} />
             )}
           </div>
           <div className="meet-followup">
