@@ -23,7 +23,7 @@ import Image from 'next/image';
 
 import { basePath } from '@/lib/constants';
 
-const DIFF_INTERVAL = 3000;
+const DIFF_INTERVAL = 2500;
 const DIFF_INTRO = 1500;
 
 // const codelines = [
