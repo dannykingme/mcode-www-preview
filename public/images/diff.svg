@@ -5,12 +5,16 @@
   <path class="dff-red" d="M24,20c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/>
   <path class="dff-yellow" d="M38,20c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/>
   <path class="dff-green" d="M52,20c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/>
-  <text class="dff-title dff-text" x="96" y="113.05">Translating Angular into React</text>
+  <text class="dff-title dff-title-1 dff-text" x="96" y="113.05">Translating Angular to React</text>
+  <text class="dff-title dff-title-2 dff-text" x="96" y="113.05">Refactoring Java into Python</text>
+  <text class="dff-title dff-title-3 dff-text" x="96" y="113.05">Modernizing C# into C++</text>
   <path class="dff-label-pill" d="M146.73,153.13h-38.73c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12h38.73c6.63,0,12,5.37,12,12h0c0,6.63-5.37,12-12,12Z"/>
   <text class="dff-label dff-text" x="111.84" y="144.85">Open</text>
   <text class="dff-user dff-text" x="166.12" y="144.87">mcode-bot wants to merge</text>
   <text class="dff-action dff-text" x="379.22" y="144.87">commits into  main  from  modelcode-ai</text>
-  <text class="dff-count dff-text" x="324.23" y="145.2">144,000</text>
+  <text class="dff-count dff-count-1 dff-text" x="324.23" y="145.2">144,000</text>
+  <text class="dff-count dff-count-2 dff-text" x="324.23" y="145.2">660,500</text>
+  <text class="dff-count dff-count-3 dff-text" x="324.23" y="145.2">233,654</text>
   <path class="dff-master-tag dff-tag" d="M484.57,149.44h-25.32c-2.76,0-5-2.24-5-5v-6c0-2.76,2.24-5,5-5h25.32c2.76,0,5,2.24,5,5v6c0,2.76-2.24,5-5,5Z"/>
   <text class="dff-master dff-text" x="458.47" y="144.87">main</text>
   <path class="dff-branch-tag dff-tag" d="M602.48,149.44h-75.44c-2.76,0-5-2.24-5-5v-6c0-2.76,2.24-5,5-5h75.44c2.76,0,5,2.24,5,5v6c0,2.76-2.24,5-5,5Z"/>

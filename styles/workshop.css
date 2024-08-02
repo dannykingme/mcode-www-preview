@@ -1289,6 +1289,67 @@ h6,
   align-items: center;
   justify-content: center;
   margin: var(--tile) 0 calc(var(--tile) * 1.5);
+  &.intro {
+    .dff-title-2,
+    .dff-title-3,
+    .dff-count-2,
+    .dff-count-3 {
+      display: none;
+    }
+  }
+  &.active {
+    &.dff-1 {
+      .dff-title-1,
+      .dff-count-1 {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .dff-title-2,
+      .dff-count-2 {
+        transform: translate(0, 100%);
+        opacity: 0;
+      }
+      .dff-title-3,
+      .dff-count-3 {
+        transform: translate(0, -100%);
+        opacity: 0;
+      }
+    }
+    &.dff-2 {
+      .dff-title-1,
+      .dff-count-1 {
+        transform: translate(0, -100%);
+        opacity: 0;
+      }
+      .dff-title-2,
+      .dff-count-2 {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      .dff-title-3,
+      .dff-count-3 {
+        transform: translate(0, 100%);
+        opacity: 0;
+      }
+    }
+    &.dff-3 {
+      .dff-title-1,
+      .dff-count-1 {
+        transform: translate(0, 100%);
+        opacity: 0;
+      }
+      .dff-title-2,
+      .dff-count-2 {
+        transform: translate(0, -100%);
+        opacity: 0;
+      }
+      .dff-title-3,
+      .dff-count-3 {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .dff {
@@ -1378,6 +1439,7 @@ h6,
 .dff-title {
   font-size: 24px;
   font-family: var(--font-display);
+  transition: var(--run) var(--now) var(--fadein);
 }
 
 .dff-label {
@@ -1387,6 +1449,7 @@ h6,
 .dff-count {
   font-family: var(--font-mono);
   font-weight: 500;
+  transition: var(--run) var(--soon) var(--fadein);
 }
 
 .dff-red {
