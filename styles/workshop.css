@@ -887,6 +887,7 @@
 }
 
 .hero {
+  --dot-opacity: 25%;
   /* background-color: var(--black); */
   /* background: linear-gradient(
       to bottom,
@@ -904,10 +905,22 @@
       var(--black) 50%,
       transparent 100%
     ),
-    radial-gradient(circle, rgb(255 255 255 / 21%) 1px, transparent 1px) center /
-      var(--xs) var(--xs),
+    radial-gradient(
+        circle,
+        rgb(255 255 255 / var(--dot-opacity)) 1px,
+        transparent 1px
+      )
+      center / var(--xs) var(--xs),
     linear-gradient(var(--black), var(--black)) 100%;
   animation: 2s var(--fadein) var(--now) both hero;
+
+  @media (--l) {
+    --dot-opacity: 30%;
+  }
+
+  @media (--s) {
+    --dot-opacity: 35%;
+  }
 }
 
 /* @keyframes hero {
