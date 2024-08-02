@@ -23,6 +23,8 @@ import Image from 'next/image';
 
 import { basePath } from '@/lib/constants';
 
+const DIFF_INTERVAL = 5000;
+
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
 //   `issues=[] if 'TODO' in line: issues.append(f"Line {idx}: TODO found") if len(line) > 80:`,
@@ -196,13 +198,13 @@ export default function Home() {
           const nextIndex = (currentIndex + 1) % diffClassNames.length;
           return diffClassNames[nextIndex];
         });
-      }, 10000);
+      }, DIFF_INTERVAL);
 
       changeInterval = setInterval(() => {
         setChangeClass((prevClass) =>
           prevClass === 'deletion' ? 'addition' : 'deletion'
         );
-      }, 10000);
+      }, DIFF_INTERVAL);
     } else {
       setIsDiffActive(false);
       setCurrentDiffClass('dff-react');
