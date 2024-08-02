@@ -23,8 +23,8 @@ import Image from 'next/image';
 
 import { basePath } from '@/lib/constants';
 
-const DIFF_INTERVAL = 5000;
-const DIFF_INTRO = 2000;
+const DIFF_INTERVAL = 3000;
+const DIFF_INTRO = 1500;
 
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
@@ -196,21 +196,21 @@ export default function Home() {
       timeout = setTimeout(() => {
         setIsDiffActive(true);
         setIsDiffEntering(false);
+
+        interval = setInterval(() => {
+          setCurrentDiffClass((prevClass) => {
+            const currentIndex = diffClassNames.indexOf(prevClass);
+            const nextIndex = (currentIndex + 1) % diffClassNames.length;
+            return diffClassNames[nextIndex];
+          });
+        }, DIFF_INTERVAL);
+
+        changeInterval = setInterval(() => {
+          setChangeClass((prevClass) =>
+            prevClass === 'deletion' ? 'addition' : 'deletion'
+          );
+        }, DIFF_INTERVAL);
       }, DIFF_INTRO);
-
-      interval = setInterval(() => {
-        setCurrentDiffClass((prevClass) => {
-          const currentIndex = diffClassNames.indexOf(prevClass);
-          const nextIndex = (currentIndex + 1) % diffClassNames.length;
-          return diffClassNames[nextIndex];
-        });
-      }, DIFF_INTERVAL);
-
-      changeInterval = setInterval(() => {
-        setChangeClass((prevClass) =>
-          prevClass === 'deletion' ? 'addition' : 'deletion'
-        );
-      }, DIFF_INTERVAL);
     } else {
       setIsDiffActive(false);
       setCurrentDiffClass('dff-1');
