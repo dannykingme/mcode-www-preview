@@ -1389,3 +1389,7 @@ h6,
 .dff-branch {
   fill: #069bfa;
 }
+
+.spacer {
+  margin-bottom: var(--xl);
+}

@@ -433,6 +433,10 @@ export default function Home() {
 
         {/* <hr /> */}
 
+        <div className="spacer" />
+
+        {/* TODO(dk): Waiting for Antoine to make these white papers available. */}
+        {/*
         <div className="articles-container">
           <div className="content">
             <div className="articles-heading">
@@ -483,6 +487,7 @@ export default function Home() {
             <div className="articles-scroll"></div>
           </div>
         </div>
+        */}
 
         <div className="codelines-container">
           <div
