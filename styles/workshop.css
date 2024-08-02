@@ -129,6 +129,7 @@
   }
 
   @media (--xxs) {
+    flex-direction: column;
     margin-top: calc(var(--xs) * 0.75);
     font-size: calc(var(--xs) * 1);
   }
@@ -523,7 +524,6 @@
   /* font-weight: 600; */
   ~ h2 {
     margin-top: 0;
-    max-width: calc(var(--xl) * 1.5);
   }
 }
 
@@ -535,12 +535,24 @@
   /* margin-bottom: var(--tile); */
   /* margin: calc(var(--tile) * 2) 0; */
   margin: 20vh 0;
+  h2 {
+    max-width: calc(var(--xl) * 1.5);
+
+    @media (--xs) {
+      max-width: 100%;
+    }
+  }
   hr {
     width: var(--padding);
     margin: calc(var(--xxs) * 2) 0;
     border-width: 4px;
     border-color: var(--focus);
     border-radius: var(--tile);
+
+    @media (--xs) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &:nth-child(even) {
     flex-direction: row-reverse;
@@ -551,6 +563,14 @@
   }
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (--xs) {
+    flex-direction: column;
+    align-items: center;
+    &:nth-child(even) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -563,6 +583,10 @@
 
 .feature-content {
   flex: 1;
+
+  @media (--xs) {
+    text-align: center;
+  }
 }
 
 .codelines-container {
@@ -713,6 +737,10 @@
 .articles-heading {
   /* font-family: var(--font-copy); */
   margin-bottom: var(--tile);
+
+  @media (--xxs) {
+    text-align: center;
+  }
 }
 
 .articles {
@@ -726,6 +754,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+
+  @media (--xxs) {
+    flex-direction: column;
+  }
 }
 
 .article {
@@ -741,6 +773,12 @@
   border-right: var(--border);
   scroll-snap-stop: normal;
   scroll-snap-align: start;
+
+  @media (--xxs) {
+    width: 100%;
+    padding: var(--padding) 0;
+    border-right: none;
+  }
   &:first-child {
     padding-left: 0;
   }
@@ -785,6 +823,10 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   transition: color var(--run);
+
+  @media (--xxs) {
+    height: auto;
+  }
 }
 
 .article-meta {
@@ -921,6 +963,20 @@
 
 .meet-content {
   text-align: center;
+
+  h1 {
+    @media (--s) {
+      font-size: 3rem;
+    }
+
+    @media (--xs) {
+      font-size: 2.5rem;
+    }
+
+    @media (--xs) {
+      font-size: 2rem;
+    }
+  }
 }
 
 .meet-followup {
