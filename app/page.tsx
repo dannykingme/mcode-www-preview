@@ -103,7 +103,7 @@ export default function Home() {
   const [isOutroVisible, setIsOutroVisible] = useState(true);
   const [isDiffVisible, setIsDiffVisible] = useState(true);
   const [isDiffActive, setIsDiffActive] = useState(false);
-  const [changeClass, setChangeClass] = useState('addition');
+  const [changeClass, setChangeClass] = useState('deletion');
   const [currentDiffClass, setCurrentDiffClass] = useState('dff-react');
 
   const diffClassNames = ['dff-react', 'dff-python', 'dff-cpp'];
@@ -196,13 +196,13 @@ export default function Home() {
 
       changeInterval = setInterval(() => {
         setChangeClass((prevClass) =>
-          prevClass === 'addition' ? 'deletion' : 'addition'
+          prevClass === 'deletion' ? 'addition' : 'deletion'
         );
       }, 10000);
     } else {
       setIsDiffActive(false);
       setCurrentDiffClass('dff-react');
-      setChangeClass('addition');
+      setChangeClass('deletion');
     }
 
     return () => {
