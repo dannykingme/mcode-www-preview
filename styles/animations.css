@@ -312,6 +312,15 @@
   }
 }
 
+@keyframes dff-line-down {
+  0% {
+    transform: translate(0, -72px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 @keyframes auras {
   0% {
     transform: scale(0);
@@ -484,7 +493,7 @@
   }
 }
 
-.dff-outer.deletion.active {
+.dff-outer.active.deletion {
   --du01: var(--run-slow);
   --du02: var(--run-slow);
   --du03: var(--run-slow);
@@ -574,17 +583,14 @@
 
   .dff-right-line-6 {
     animation: var(--du11) var(--fadein) var(--de11) both shrink-out-x;
-    transform-origin: left;
   }
 
   .dff-right-line-7 {
     animation: var(--du12) var(--fadein) var(--de12) both shrink-out-x;
-    transform-origin: left;
   }
 
   .dff-right-line-8 {
     animation: var(--du13) var(--fadein) var(--de13) both shrink-out-x;
-    transform-origin: left;
   }
 
   .dff-right-line-9 {
@@ -613,5 +619,125 @@
 
   .dff-right-line-15 {
     animation: var(--du20) var(--fadein) var(--de20) both dff-line-up;
+  }
+}
+
+.dff-outer.active.addition {
+  --du01: var(--run-slow);
+  --du02: var(--run-slow);
+  --du03: var(--run-slow);
+  --du04: var(--run-slow);
+  --du05: var(--run-slow);
+  --du06: var(--run-slow);
+  --du07: var(--run-slow);
+  --du08: var(--run-slow);
+  --du09: var(--run-slow);
+  --du10: var(--run);
+  --du11: var(--run);
+  --du12: var(--run);
+  --du13: var(--run);
+  --du14: var(--run);
+  --du15: var(--run);
+  --du16: var(--run);
+  --du17: var(--run);
+  --du18: var(--run);
+  --du19: var(--run);
+  --du20: var(--run);
+
+  --de01: 0ms;
+  --de02: calc((var(--du01) * 0.34) + var(--de01));
+  --de03: calc((var(--du02) * 0.89) + var(--de02));
+  --de04: calc((var(--du03) * 0.21) + var(--de03));
+  --de05: calc((var(--du04) * 0.13) + var(--de04));
+  --de06: calc((var(--du05) * 0.08) + var(--de05));
+  --de07: calc((var(--du06) * 0.05) + var(--de06));
+  --de08: calc((var(--du07) * 0.03) + var(--de07));
+  --de09: calc((var(--du08) * 0.02) + var(--de08));
+  --de10: calc((var(--du09) * 0.34) + var(--de09));
+  --de11: calc((var(--du10) * 0.21) + var(--de10));
+  --de12: calc((var(--du11) * 0.13) + var(--de11));
+  --de13: calc((var(--du12) * 0.08) + var(--de12));
+  --de14: calc((var(--du13) * 0.08) + var(--de13));
+  --de15: calc((var(--du14) * 0.08) + var(--de14));
+  --de16: calc((var(--du15) * 0.08) + var(--de15));
+  --de17: calc((var(--du16) * 0.08) + var(--de16));
+  --de18: calc((var(--du17) * 0.05) + var(--de17));
+  --de19: calc((var(--du18) * 0.03) + var(--de18));
+  --de20: calc((var(--du19) * 0.02) + var(--de19));
+
+  .dff-hi-left-5 {
+    display: inline;
+    animation: var(--du01) var(--fadein) var(--de01) both grow-in-x;
+  }
+
+  .dff-left-line-5 {
+    animation: var(--du02) var(--fadein) var(--de02) both dff-line;
+  }
+
+  .dff-right-line-15 {
+    animation: var(--du03) var(--fadein) var(--de03) both dff-line-down;
+  }
+
+  .dff-right-line-14 {
+    animation: var(--du04) var(--fadein) var(--de04) both dff-line-down;
+  }
+
+  .dff-right-line-13 {
+    animation: var(--du05) var(--fadein) var(--de05) both dff-line-down;
+  }
+
+  .dff-right-line-12 {
+    animation: var(--du06) var(--fadein) var(--de06) both dff-line-down;
+  }
+
+  .dff-right-line-11 {
+    animation: var(--du07) var(--fadein) var(--de07) both dff-line-down;
+  }
+
+  .dff-right-line-10 {
+    animation: var(--du08) var(--fadein) var(--de08) both dff-line-down;
+  }
+
+  .dff-right-line-9 {
+    animation: var(--du09) var(--fadein) var(--de09) both dff-line-down;
+  }
+
+  .dff-hi-right-5 {
+    display: inline;
+    animation: var(--du10) var(--fadein) var(--de10) both grow-in-x;
+  }
+
+  .dff-right-line-5 {
+    animation: var(--du11) var(--fadein) var(--de11) both dff-line;
+  }
+
+  .dff-hi-right-6 {
+    display: inline;
+    animation: var(--du12) var(--fadein) var(--de12) both grow-in-x;
+  }
+
+  .dff-right-line-6 {
+    animation: var(--du13) var(--fadein) var(--de13) both grow-in-x;
+    fill: var(--focus);
+  }
+
+  .dff-hi-right-7 {
+    display: inline;
+    animation: var(--du14) var(--fadein) var(--de14) both grow-in-x;
+  }
+
+  .dff-right-line-7 {
+    animation: var(--du15) var(--fadein) var(--de15) both grow-in-x;
+    fill: var(--focus);
+  }
+
+  .dff-hi-right-8 {
+    display: inline;
+    animation: var(--du16) var(--fadein) var(--de16) both grow-in-x;
+  }
+
+  .dff-right-line-8 {
+    animation: var(--du17) var(--fadein) var(--de17) both grow-in-x;
+    fill: var(--focus);
   }
 }

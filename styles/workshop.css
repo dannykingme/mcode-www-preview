@@ -1298,6 +1298,10 @@ h6,
     transform-box: fill-box;
     transform-origin: center;
   }
+  .dff-hi,
+  .dff-line {
+    transform-origin: left;
+  }
 }
 
 .dff-shadow {
@@ -1407,7 +1411,6 @@ h6,
 .dff-hi {
   display: none;
   fill: #eef7ff;
-  transform-origin: left;
 }
 
 .dff-tag {
