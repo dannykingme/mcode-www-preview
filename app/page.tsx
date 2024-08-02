@@ -15,6 +15,8 @@ import IlloWriting from '@/images/writing.svg';
 import IlloCode from '@/images/code.svg';
 import IlloSecurity from '@/images/security.svg';
 import IlloEnterprise from '@/images/enterprise.svg';
+import ArtDiff from '@/images/art-diff.svg';
+import ArtDiffSpacer from '@/images/art-diff-spacer.svg';
 import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
@@ -96,8 +98,10 @@ export default function Home() {
   const meetElement: RefObject<HTMLDivElement> = useRef(null);
   const codeElement: RefObject<HTMLDivElement> = useRef(null);
   const lineElement: RefObject<HTMLDivElement> = useRef(null);
+  const diffElement: RefObject<HTMLDivElement> = useRef(null);
 
   const [isOutroVisible, setIsOutroVisible] = useState(true);
+  const [isDiffVisible, setIsDiffVisible] = useState(true);
 
   const handleAboutClick = () => {
     if (aboutElement.current) {
@@ -131,6 +135,32 @@ export default function Home() {
           setIsOutroVisible(true);
         } else if (isInvisible) {
           setIsOutroVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const margin = 128;
+    const handleScroll = () => {
+      if (diffElement.current) {
+        const rect = diffElement.current.getBoundingClientRect();
+        const halfHeight = rect.height / 2;
+        const isDiffVisible =
+          rect.top < window.innerHeight - halfHeight &&
+          rect.bottom > halfHeight;
+        const isOutOfViewport =
+          rect.bottom <= -margin || rect.top >= window.innerHeight + margin;
+
+        if (isDiffVisible) {
+          setIsDiffVisible(true);
+        } else if (isOutOfViewport) {
+          setIsDiffVisible(false);
         }
       }
     };
@@ -183,14 +213,19 @@ export default function Home() {
             </h2> */}
             <h1>We know the burden of paying off massive tech debt...</h1>
           </div>
-          <div className="meet-media">
-            <Image
-              src={`${basePath}/images/diff.png`}
-              width={1024}
-              height={768}
-              alt="Modelcode review tool"
-              layout="responsive"
-            />
+          <div className="dff-outer dff-react" ref={diffElement}>
+            {isDiffVisible ? (
+              <div className="dff">
+                <div className="dff-auras">
+                  <div className="dff-aura-1 dff-aura" />
+                  <div className="dff-aura-2 dff-aura" />
+                </div>
+                <div className="dff-shadow" />
+                <ArtDiff width={1280} />
+              </div>
+            ) : (
+              <ArtDiffSpacer width={1280} />
+            )}
           </div>
           <div className="meet-followup">
             {/* <h2>
