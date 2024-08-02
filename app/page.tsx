@@ -154,6 +154,11 @@ export default function Home() {
     };
   }, []);
 
+  const diffEntered = () => {
+    setIsDiffEntering(true);
+    setTimeout(() => setIsDiffEntering(false), DIFF_INTRO);
+  };
+
   useEffect(() => {
     const margin = 128;
     const handleScroll = () => {
@@ -165,13 +170,13 @@ export default function Home() {
           rect.bottom > halfHeight;
         const isOutOfViewport =
           rect.bottom <= -margin || rect.top >= window.innerHeight + margin;
-
         if (isDiffVisible) {
           setIsDiffVisible(true);
-          setIsDiffEntering(true);
+          if (!isDiffEntering && !isDiffActive) {
+            diffEntered();
+          }
         } else if (isOutOfViewport) {
           setIsDiffVisible(false);
-          setIsDiffEntering(false);
         }
       }
     };
@@ -180,7 +185,7 @@ export default function Home() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isDiffEntering, isDiffActive]);
 
   useEffect(() => {
     let interval: NodeJS.Timeout;
