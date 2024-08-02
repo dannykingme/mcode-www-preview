@@ -24,6 +24,7 @@ import Image from 'next/image';
 import { basePath } from '@/lib/constants';
 
 const DIFF_INTERVAL = 5000;
+const DIFF_INTRO = 2000;
 
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
