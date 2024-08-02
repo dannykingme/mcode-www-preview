@@ -6,8 +6,8 @@
   <path class="dff-yellow" d="M38,20c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/>
   <path class="dff-green" d="M52,20c0,2.21-1.79,4-4,4s-4-1.79-4-4,1.79-4,4-4,4,1.79,4,4Z"/>
   <text class="dff-title dff-title-1 dff-text" x="96" y="113.05">Translating Angular to React</text>
-  <text class="dff-title dff-title-2 dff-text" x="96" y="113.05">Refactoring Java into Python</text>
-  <text class="dff-title dff-title-3 dff-text" x="96" y="113.05">Modernizing C# into C++</text>
+  <text class="dff-title dff-title-2 dff-text" x="96" y="113.05">Refactoring Python into Java</text>
+  <text class="dff-title dff-title-3 dff-text" x="96" y="113.05">Modernizing from C/C++ to C#</text>
   <path class="dff-label-pill" d="M146.73,153.13h-38.73c-6.63,0-12-5.37-12-12h0c0-6.63,5.37-12,12-12h38.73c6.63,0,12,5.37,12,12h0c0,6.63-5.37,12-12,12Z"/>
   <text class="dff-label dff-text" x="111.84" y="144.85">Open</text>
   <text class="dff-user dff-text" x="166.12" y="144.87">mcode-bot wants to merge</text>
@@ -38,7 +38,7 @@
   <path class="dff-left-line-10 dff-line" d="M344.33,457.13H108.6c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-left-line-11 dff-line" d="M238.01,481.13H108.6c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-left-line-12 dff-line" d="M158.11,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-
+  
   <path class="dff-right-lines dff-lines" d="M672,221.13v290.87h-284V221.13c0-2.21,1.79-4,4-4h276c2.21,0,4,1.79,4,4Z"/>
   <path class="dff-hi-right-8 dff-hi" d="M672,413.13h-284v-24h284v24Z"/>
   <path class="dff-hi-right-7 dff-hi" d="M672,389.13h-284v-24h284v24Z"/>
@@ -53,10 +53,10 @@
   <path class="dff-right-line-7 dff-line" d="M545.75,385.13h-145.75c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h145.75c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-8 dff-line" d="M529.41,409.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-9 dff-line" d="M653.97,433.13h-253.97c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h253.97c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
-  <path class="dff-right-line-10 dff-line" d="M635.73,457.13h-235.73c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
-  <path class="dff-right-line-11 dff-line" d="M529.41,481.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
-  <path class="dff-right-line-12 dff-line" d="M449.51,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
-  <path class="dff-right-line-13 dff-line" d="M551.88,529.13h-151.88c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h151.88c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
-  <path class="dff-right-line-14 dff-line" d="M623.45,553.13h-223.45c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h223.45c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
-  <path class="dff-right-line-15 dff-line" d="M479.59,577.13h-79.59c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h79.59c2.21,0,4,1.79,4,4v8c0,2.21,1.79,4-4,4Z"/>
+  <path class="dff-right-line-10 dff-line" d="M635.73,457.13h-235.73c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h235.73c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-11 dff-line" d="M529.41,481.13h-129.41c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h129.41c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-12 dff-line" d="M449.51,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-13 dff-line" d="M551.88,529.13h-151.88c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h151.88c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-14 dff-line" d="M623.45,553.13h-223.45c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h223.45c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
+  <path class="dff-right-line-15 dff-line" d="M479.59,577.13h-79.59c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h79.59c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
 </svg>
