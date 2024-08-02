@@ -107,9 +107,9 @@ export default function Home() {
   const [isDiffActive, setIsDiffActive] = useState(false);
   const [isDiffEntering, setIsDiffEntering] = useState(true);
   const [changeClass, setChangeClass] = useState('deletion');
-  const [currentDiffClass, setCurrentDiffClass] = useState('dff-react');
+  const [currentDiffClass, setCurrentDiffClass] = useState('dff-1');
 
-  const diffClassNames = ['dff-react', 'dff-python', 'dff-cpp'];
+  const diffClassNames = ['dff-1', 'dff-2', 'dff-3'];
 
   const handleAboutClick = () => {
     if (aboutElement.current) {
@@ -207,7 +207,7 @@ export default function Home() {
       }, DIFF_INTERVAL);
     } else {
       setIsDiffActive(false);
-      setCurrentDiffClass('dff-react');
+      setCurrentDiffClass('dff-1');
       setChangeClass('deletion');
     }
 
