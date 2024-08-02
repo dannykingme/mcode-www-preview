@@ -102,6 +102,9 @@ export default function Home() {
 
   const [isOutroVisible, setIsOutroVisible] = useState(true);
   const [isDiffVisible, setIsDiffVisible] = useState(true);
+  const [currentDiffClass, setCurrentDiffClass] = useState('dff-react');
+
+  const diffClassNames = ['dff-react', 'dff-python', 'dff-cpp'];
 
   const handleAboutClick = () => {
     if (aboutElement.current) {
@@ -171,6 +174,26 @@ export default function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+
+    if (isDiffVisible) {
+      interval = setInterval(() => {
+        setCurrentDiffClass((prevClass) => {
+          const currentIndex = diffClassNames.indexOf(prevClass);
+          const nextIndex = (currentIndex + 1) % diffClassNames.length;
+          return diffClassNames[nextIndex];
+        });
+      }, 10000);
+    } else {
+      setCurrentDiffClass('dff-react');
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isDiffVisible]);
+
   return (
     <App>
       <div className="main">
@@ -213,7 +236,7 @@ export default function Home() {
             </h2> */}
             <h1>We know the burden of paying off massive tech debt...</h1>
           </div>
-          <div className="dff-outer dff-react" ref={diffElement}>
+          <div className={cn('dff-outer', currentDiffClass)} ref={diffElement}>
             {isDiffVisible ? (
               <div className="dff">
                 <div className="dff-auras">
