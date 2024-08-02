@@ -103,6 +103,7 @@ export default function Home() {
   const [isOutroVisible, setIsOutroVisible] = useState(true);
   const [isDiffVisible, setIsDiffVisible] = useState(true);
   const [isDiffActive, setIsDiffActive] = useState(false);
+  const [isDiffEntering, setIsDiffEntering] = useState(true);
   const [changeClass, setChangeClass] = useState('deletion');
   const [currentDiffClass, setCurrentDiffClass] = useState('dff-react');
 
@@ -164,8 +165,10 @@ export default function Home() {
 
         if (isDiffVisible) {
           setIsDiffVisible(true);
+          setIsDiffEntering(true);
         } else if (isOutOfViewport) {
           setIsDiffVisible(false);
+          setIsDiffEntering(false);
         }
       }
     };
@@ -184,6 +187,7 @@ export default function Home() {
     if (isDiffVisible) {
       timeout = setTimeout(() => {
         setIsDiffActive(true);
+        setIsDiffEntering(false);
       }, 2000);
 
       interval = setInterval(() => {
@@ -257,6 +261,7 @@ export default function Home() {
           <div
             className={cn('dff-outer', currentDiffClass, changeClass, {
               active: isDiffActive,
+              intro: isDiffEntering,
             })}
             ref={diffElement}
           >

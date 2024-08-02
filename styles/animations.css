@@ -376,7 +376,7 @@
 }
 */
 
-.dff {
+.dff-outer.intro {
   --dur01: var(--run-slow);
   --dur02: var(--run);
   --dur03: var(--run);
