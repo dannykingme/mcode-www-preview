@@ -191,7 +191,7 @@ export default function Home() {
       timeout = setTimeout(() => {
         setIsDiffActive(true);
         setIsDiffEntering(false);
-      }, 2000);
+      }, DIFF_INTRO);
 
       interval = setInterval(() => {
         setCurrentDiffClass((prevClass) => {
