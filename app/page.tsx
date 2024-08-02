@@ -275,6 +275,7 @@ export default function Home() {
                   <div className="dff-aura-2 dff-aura" />
                 </div>
                 <div className="dff-shadow" />
+                {/* <Diff key={changeClass} width={1280} /> */}
                 <Diff width={1280} />
               </div>
             ) : (
