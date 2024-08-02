@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, RefObject, Suspense, useState, useEffect } from 'react';
+import React, { useRef, RefObject, Suspense, useState, useEffect } from 'react';
 import cn from 'clsx';
 import Link from 'next/link';
 import Header from '@/components/Header';
