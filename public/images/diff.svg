@@ -36,10 +36,10 @@
   <path class="dff-left-line-12 dff-line" d="M158.11,505.13h-49.51c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h49.51c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
 
   <path class="dff-right-lines dff-lines" d="M672,221.13v290.87h-284V221.13c0-2.21,1.79-4,4-4h276c2.21,0,4,1.79,4,4Z"/>
-  <path class="dff-hi-right dff-hi" d="M672,413.13h-284v-24h284v24Z"/>
-  <path class="dff-hi-right dff-hi" d="M672,389.13h-284v-24h284v24Z"/>
-  <path class="dff-hi-right dff-hi" d="M672,365.13h-284v-24h284v24Z"/>
-  <path class="dff-hi-right dff-hi" d="M672,341.13h-284v-24h284v24Z"/>
+  <path class="dff-hi-right-8 dff-hi" d="M672,413.13h-284v-24h284v24Z"/>
+  <path class="dff-hi-right-7 dff-hi" d="M672,389.13h-284v-24h284v24Z"/>
+  <path class="dff-hi-right-6 dff-hi" d="M672,365.13h-284v-24h284v24Z"/>
+  <path class="dff-hi-right-5 dff-hi" d="M672,341.13h-284v-24h284v24Z"/>
   <path class="dff-right-line-1 dff-line" d="M631.71,241.13h-231.71c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h231.71c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-2 dff-line" d="M469.87,265.13h-69.87c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h69.87c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
   <path class="dff-right-line-3 dff-line" d="M601.67,289.13h-201.67c-2.21,0-4-1.79-4-4v-8c0-2.21,1.79-4,4-4h201.67c2.21,0,4,1.79,4,4v8c0,2.21-1.79,4-4,4Z"/>
