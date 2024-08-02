@@ -103,6 +103,7 @@ export default function Home() {
   const [isOutroVisible, setIsOutroVisible] = useState(true);
   const [isDiffVisible, setIsDiffVisible] = useState(true);
   const [isDiffActive, setIsDiffActive] = useState(false);
+  const [changeClass, setChangeClass] = useState('addition');
   const [currentDiffClass, setCurrentDiffClass] = useState('dff-react');
 
   const diffClassNames = ['dff-react', 'dff-python', 'dff-cpp'];
@@ -178,6 +179,7 @@ export default function Home() {
   useEffect(() => {
     let interval: NodeJS.Timeout;
     let timeout: NodeJS.Timeout;
+    let changeInterval: NodeJS.Timeout;
 
     if (isDiffVisible) {
       timeout = setTimeout(() => {
@@ -191,14 +193,22 @@ export default function Home() {
           return diffClassNames[nextIndex];
         });
       }, 10000);
+
+      changeInterval = setInterval(() => {
+        setChangeClass((prevClass) =>
+          prevClass === 'addition' ? 'deletion' : 'addition'
+        );
+      }, 10000);
     } else {
       setIsDiffActive(false);
       setCurrentDiffClass('dff-react');
+      setChangeClass('addition');
     }
 
     return () => {
       if (interval) clearInterval(interval);
       if (timeout) clearTimeout(timeout);
+      if (changeInterval) clearInterval(changeInterval);
     };
   }, [isDiffVisible]);
 
@@ -245,7 +255,7 @@ export default function Home() {
             <h1>We know the burden of paying off massive tech debt...</h1>
           </div>
           <div
-            className={cn('dff-outer', currentDiffClass, {
+            className={cn('dff-outer', currentDiffClass, changeClass, {
               active: isDiffActive,
             })}
             ref={diffElement}
