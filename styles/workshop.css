@@ -1241,6 +1241,10 @@ h6,
   border-radius: calc(var(--xs) * 2);
   box-shadow: 0 34px 55px 8px rgb(0 0 0 / 13%);
   pointer-events: none;
+
+  @media (--l) {
+    border-radius: 0;
+  }
 }
 
 .dff-auras {
