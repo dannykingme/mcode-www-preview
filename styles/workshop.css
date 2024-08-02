@@ -1407,6 +1407,7 @@ h6,
 .dff-hi {
   display: none;
   fill: #eef7ff;
+  transform-origin: left;
 }
 
 .dff-tag {

@@ -34,6 +34,16 @@
   }
 }
 
+@keyframes grow-in-x {
+  0% {
+    transform: scale(0, 1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 @keyframes tile-in-t2b {
   0% {
     opacity: 0;
@@ -458,5 +468,67 @@
 
   .dff-right-lines ~ .dff-line {
     animation: var(--dur17) var(--fadein) var(--del17) both slide-in-b2t;
+  }
+}
+
+@keyframes dff-line {
+  100% {
+    fill: var(--focus);
+  }
+}
+
+.dff-outer.deletion.active {
+  --du1: var(--run-slow);
+  --du2: var(--run-slow);
+  --du3: var(--run-slow);
+  --du4: var(--run-slow);
+  --du5: var(--run);
+  --du6: var(--run);
+  --du7: var(--run);
+  --du8: var(--run);
+
+  --de1: 0ms;
+  --de2: calc((var(--du1) * 0.34) + var(--de1));
+  --de3: calc((var(--du2) * 0.21) + var(--de2));
+  --de4: calc((var(--du3) * 0.13) + var(--de3));
+  --de5: calc((var(--du4) * 0.08) + var(--de4));
+  --de6: calc((var(--du5) * 0.08) + var(--de5));
+  --de7: calc((var(--du6) * 0.08) + var(--de6));
+  --de8: calc((var(--du7) * 0.08) + var(--de7));
+
+  .dff-hi-left-5 {
+    display: inline;
+    animation: var(--du1) var(--fadein) var(--de1) both grow-in-x;
+  }
+
+  .dff-hi-left-6 {
+    display: inline;
+    animation: var(--du2) var(--fadein) var(--de2) both grow-in-x;
+  }
+
+  .dff-hi-left-7 {
+    display: inline;
+    animation: var(--du3) var(--fadein) var(--de3) both grow-in-x;
+  }
+
+  .dff-hi-left-8 {
+    display: inline;
+    animation: var(--du4) var(--fadein) var(--de4) both grow-in-x;
+  }
+
+  .dff-left-line-5 {
+    animation: var(--du5) var(--fadein) var(--de5) both dff-line;
+  }
+
+  .dff-left-line-6 {
+    animation: var(--du6) var(--fadein) var(--de6) both dff-line;
+  }
+
+  .dff-left-line-7 {
+    animation: var(--du7) var(--fadein) var(--de7) both dff-line;
+  }
+
+  .dff-left-line-8 {
+    animation: var(--du8) var(--fadein) var(--de8) both dff-line;
   }
 }
