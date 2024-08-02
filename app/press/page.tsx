@@ -19,11 +19,13 @@ export default function ContactPage() {
             <div className="press-info">
               <h1>Media & Press Kit</h1>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                eleifend a orci sed tincidunt. Cras viverra interdum eros at
-                tempus. Vivamus a tortor ligula.
+                Want to feature Modelcode AI? By using these assets, you ensure
+                consistent and impactful branding in your media coverage.
               </p>
-              <Button text="Download kit." />
+              <Button
+                text="Download kit."
+                href="/modelcode-ai-brand-assets.zip"
+              />
             </div>
             <div className="press-media">
               <div className="press-logo">
@@ -65,7 +67,10 @@ export default function ContactPage() {
                     <Icon name="external" />
                   </div>
                 </div>
-                <Link className="article-handle" href="#" />
+                <Link
+                  className="article-handle"
+                  href="https://www.michaelfertik.com/blog/news/mitigatin-bias-in-ai-xywf9-ye53j"
+                />
               </div>
               <div className="article">
                 <h6 className="article-type">CNBC</h6>
@@ -78,7 +83,10 @@ export default function ContactPage() {
                     <Icon name="external" />
                   </div>
                 </div>
-                <Link className="article-handle" href="#" />
+                <Link
+                  className="article-handle"
+                  href="https://www.michaelfertik.com/blog/news/mitigatin-bias-in-ai-xywf9-ye53j-ec5wl"
+                />
               </div>
             </div>
             <div className="articles-scroll"></div>

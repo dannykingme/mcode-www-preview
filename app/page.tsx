@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, RefObject, Suspense, useState, useEffect } from 'react';
+import React, { useRef, RefObject, Suspense, useState, useEffect } from 'react';
 import cn from 'clsx';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -15,11 +15,16 @@ import IlloWriting from '@/images/writing.svg';
 import IlloCode from '@/images/code.svg';
 import IlloSecurity from '@/images/security.svg';
 import IlloEnterprise from '@/images/enterprise.svg';
+import Diff from '@/images/diff.svg';
+import DiffSpacer from '@/images/diff-spacer.svg';
 import Icon from '@/components/Icon';
 import Button from '@/components/Button';
 import Image from 'next/image';
 
 import { basePath } from '@/lib/constants';
+
+const DIFF_INTERVAL = 5000;
+const DIFF_INTRO = 2000;
 
 // const codelines = [
 //   `issues.append(f"{idx}: Print statement, issues=[] Print statement too long") return issues`,
@@ -96,8 +101,16 @@ export default function Home() {
   const meetElement: RefObject<HTMLDivElement> = useRef(null);
   const codeElement: RefObject<HTMLDivElement> = useRef(null);
   const lineElement: RefObject<HTMLDivElement> = useRef(null);
+  const diffElement: RefObject<HTMLDivElement> = useRef(null);
 
-  const [isVisible, setIsVisible] = useState(true);
+  const [isOutroVisible, setIsOutroVisible] = useState(true);
+  const [isDiffVisible, setIsDiffVisible] = useState(true);
+  const [isDiffActive, setIsDiffActive] = useState(false);
+  const [isDiffEntering, setIsDiffEntering] = useState(true);
+  const [changeClass, setChangeClass] = useState('deletion');
+  const [currentDiffClass, setCurrentDiffClass] = useState('dff-1');
+
+  const diffClassNames = ['dff-1', 'dff-2', 'dff-3'];
 
   const handleAboutClick = () => {
     if (aboutElement.current) {
@@ -123,14 +136,14 @@ export default function Home() {
       if (codeElement.current && lineElement.current) {
         const rect = codeElement.current.getBoundingClientRect();
         const rect2 = lineElement.current.getBoundingClientRect();
-        const isVisible =
+        const isOutroVisible =
           rect2.top < window.innerHeight - margin && rect2.bottom > 0;
         const isInvisible = rect.top >= window.innerHeight;
 
-        if (isVisible) {
-          setIsVisible(true);
+        if (isOutroVisible) {
+          setIsOutroVisible(true);
         } else if (isInvisible) {
-          setIsVisible(false);
+          setIsOutroVisible(false);
         }
       }
     };
@@ -140,6 +153,76 @@ export default function Home() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const diffEntered = () => {
+    setIsDiffEntering(true);
+    setTimeout(() => setIsDiffEntering(false), DIFF_INTRO);
+  };
+
+  useEffect(() => {
+    const margin = 128;
+    const handleScroll = () => {
+      if (diffElement.current) {
+        const rect = diffElement.current.getBoundingClientRect();
+        const halfHeight = rect.height / 2;
+        const isDiffVisible =
+          rect.top < window.innerHeight - halfHeight &&
+          rect.bottom > halfHeight;
+        const isOutOfViewport =
+          rect.bottom <= -margin || rect.top >= window.innerHeight + margin;
+        if (isDiffVisible) {
+          setIsDiffVisible(true);
+          if (!isDiffEntering && !isDiffActive) {
+            diffEntered();
+          }
+        } else if (isOutOfViewport) {
+          setIsDiffVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isDiffEntering, isDiffActive]);
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    let timeout: NodeJS.Timeout;
+    let changeInterval: NodeJS.Timeout;
+
+    if (isDiffVisible) {
+      timeout = setTimeout(() => {
+        setIsDiffActive(true);
+        setIsDiffEntering(false);
+      }, DIFF_INTRO);
+
+      interval = setInterval(() => {
+        setCurrentDiffClass((prevClass) => {
+          const currentIndex = diffClassNames.indexOf(prevClass);
+          const nextIndex = (currentIndex + 1) % diffClassNames.length;
+          return diffClassNames[nextIndex];
+        });
+      }, DIFF_INTERVAL);
+
+      changeInterval = setInterval(() => {
+        setChangeClass((prevClass) =>
+          prevClass === 'deletion' ? 'addition' : 'deletion'
+        );
+      }, DIFF_INTERVAL);
+    } else {
+      setIsDiffActive(false);
+      setCurrentDiffClass('dff-1');
+      setChangeClass('deletion');
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+      if (timeout) clearTimeout(timeout);
+      if (changeInterval) clearInterval(changeInterval);
+    };
+  }, [isDiffVisible]);
 
   return (
     <App>
@@ -183,14 +266,26 @@ export default function Home() {
             </h2> */}
             <h1>We know the burden of paying off massive tech debt...</h1>
           </div>
-          <div className="meet-media">
-            <Image
-              src={`${basePath}/images/diff.png`}
-              width={1024}
-              height={768}
-              alt="Modelcode review tool"
-              layout="responsive"
-            />
+          <div
+            className={cn('dff-outer', currentDiffClass, changeClass, {
+              active: isDiffActive,
+              intro: isDiffEntering,
+            })}
+            ref={diffElement}
+          >
+            {isDiffVisible ? (
+              <div className="dff">
+                <div className="dff-auras">
+                  <div className="dff-aura-1 dff-aura" />
+                  <div className="dff-aura-2 dff-aura" />
+                </div>
+                <div className="dff-shadow" />
+                {/* <Diff key={changeClass} width={1280} /> */}
+                <Diff width={1280} />
+              </div>
+            ) : (
+              <DiffSpacer width={1280} />
+            )}
           </div>
           <div className="meet-followup">
             {/* <h2>
@@ -338,6 +433,10 @@ export default function Home() {
 
         {/* <hr /> */}
 
+        <div className="spacer" />
+
+        {/* TODO(dk): Waiting for Antoine to make these white papers available. */}
+        {/*
         <div className="articles-container">
           <div className="content">
             <div className="articles-heading">
@@ -388,11 +487,12 @@ export default function Home() {
             <div className="articles-scroll"></div>
           </div>
         </div>
+        */}
 
         <div className="codelines-container">
           <div
             className={cn('codelines', {
-              visible: isVisible,
+              visible: isOutroVisible,
             })}
             ref={codeElement}
           >
@@ -422,15 +522,20 @@ export default function Home() {
               <div className="codeline-copy-line" />
               <div className="codeline-copy-line" />
               <div className="codeline-copy-line">
-                Legacy code is expensive,
+                <span className="codeline-white-top">
+                  Legacy code is expensive,
+                </span>
               </div>
               {/* <div className="codeline-copy-line" /> */}
-              <div className="codeline-copy-line">let’s fix it.</div>
+              <div className="codeline-copy-line">
+                <span className="codeline-white-bottom">let’s fix it.</span>
+              </div>
               <div className="codeline-copy-line" ref={lineElement} />
               {/* <div className="codeline-copy-line" /> */}
               {/* <div className="codeline-copy-line">Get started.</div> */}
               {/* <Button mode="filled" theme="dark" text="Get started." /> */}
               <Button
+                className="codeline-button"
                 mode="filled"
                 theme="dark"
                 text="Get started."

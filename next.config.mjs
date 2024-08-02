@@ -28,12 +28,7 @@ const nextConfig = {
         loader: '@svgr/webpack',
         options: {
           svgoConfig: {
-            plugins: [
-              {
-                name: 'prefixIds',
-                active: false,
-              },
-            ],
+            plugins: [],
           },
         },
       },
