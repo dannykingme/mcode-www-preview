@@ -300,6 +300,18 @@
   }
 }
 
+@keyframes dff-line {
+  100% {
+    fill: var(--focus);
+  }
+}
+
+@keyframes dff-line-up {
+  100% {
+    transform: translate(0, -72px);
+  }
+}
+
 @keyframes auras {
   0% {
     transform: scale(0);
@@ -472,64 +484,134 @@
   }
 }
 
-@keyframes dff-line {
-  100% {
-    fill: var(--focus);
-  }
-}
-
 .dff-outer.deletion.active {
-  --du1: var(--run-slow);
-  --du2: var(--run-slow);
-  --du3: var(--run-slow);
-  --du4: var(--run-slow);
-  --du5: var(--run);
-  --du6: var(--run);
-  --du7: var(--run);
-  --du8: var(--run);
+  --du01: var(--run-slow);
+  --du02: var(--run-slow);
+  --du03: var(--run-slow);
+  --du04: var(--run-slow);
+  --du05: var(--run);
+  --du06: var(--run);
+  --du07: var(--run);
+  --du08: var(--run);
+  --du09: var(--run);
+  --du10: var(--run);
+  --du11: var(--run);
+  --du12: var(--run);
+  --du13: var(--run);
+  --du14: var(--run-slow);
+  --du15: var(--run-slow);
+  --du16: var(--run-slow);
+  --du17: var(--run-slow);
+  --du18: var(--run-slow);
+  --du19: var(--run-slow);
+  --du20: var(--run-slow);
 
-  --de1: 0ms;
-  --de2: calc((var(--du1) * 0.34) + var(--de1));
-  --de3: calc((var(--du2) * 0.21) + var(--de2));
-  --de4: calc((var(--du3) * 0.13) + var(--de3));
-  --de5: calc((var(--du4) * 0.08) + var(--de4));
-  --de6: calc((var(--du5) * 0.08) + var(--de5));
-  --de7: calc((var(--du6) * 0.08) + var(--de6));
-  --de8: calc((var(--du7) * 0.08) + var(--de7));
+  --de01: 0ms;
+  --de02: calc((var(--du01) * 0.34) + var(--de01));
+  --de03: calc((var(--du02) * 0.21) + var(--de02));
+  --de04: calc((var(--du03) * 0.13) + var(--de03));
+  --de05: calc((var(--du04) * 0.08) + var(--de04));
+  --de06: calc((var(--du05) * 0.08) + var(--de05));
+  --de07: calc((var(--du06) * 0.08) + var(--de06));
+  --de08: calc((var(--du07) * 0.08) + var(--de07));
+  --de09: calc((var(--du08) * 0.89) + var(--de08));
+  --de10: calc((var(--du09) * 0.13) + var(--de09));
+  --de11: calc((var(--du10) * 0.34) + var(--de10));
+  --de12: calc((var(--du11) * 0.21) + var(--de11));
+  --de13: calc((var(--du12) * 0.13) + var(--de12));
+  --de14: calc((var(--du13) * 0.34) + var(--de13));
+  --de15: calc((var(--du14) * 0.21) + var(--de14));
+  --de16: calc((var(--du15) * 0.13) + var(--de15));
+  --de17: calc((var(--du16) * 0.08) + var(--de16));
+  --de18: calc((var(--du17) * 0.05) + var(--de17));
+  --de19: calc((var(--du18) * 0.03) + var(--de18));
+  --de20: calc((var(--du19) * 0.02) + var(--de19));
 
   .dff-hi-left-5 {
     display: inline;
-    animation: var(--du1) var(--fadein) var(--de1) both grow-in-x;
+    animation: var(--du01) var(--fadein) var(--de01) both grow-in-x;
+  }
+
+  .dff-left-line-5 {
+    animation: var(--du02) var(--fadein) var(--de02) both dff-line;
   }
 
   .dff-hi-left-6 {
     display: inline;
-    animation: var(--du2) var(--fadein) var(--de2) both grow-in-x;
+    animation: var(--du03) var(--fadein) var(--de03) both grow-in-x;
+  }
+
+  .dff-left-line-6 {
+    animation: var(--du04) var(--fadein) var(--de04) both dff-line;
   }
 
   .dff-hi-left-7 {
     display: inline;
-    animation: var(--du3) var(--fadein) var(--de3) both grow-in-x;
+    animation: var(--du05) var(--fadein) var(--de05) both grow-in-x;
+  }
+
+  .dff-left-line-7 {
+    animation: var(--du06) var(--fadein) var(--de06) both dff-line;
   }
 
   .dff-hi-left-8 {
     display: inline;
-    animation: var(--du4) var(--fadein) var(--de4) both grow-in-x;
-  }
-
-  .dff-left-line-5 {
-    animation: var(--du5) var(--fadein) var(--de5) both dff-line;
-  }
-
-  .dff-left-line-6 {
-    animation: var(--du6) var(--fadein) var(--de6) both dff-line;
-  }
-
-  .dff-left-line-7 {
-    animation: var(--du7) var(--fadein) var(--de7) both dff-line;
+    animation: var(--du07) var(--fadein) var(--de07) both grow-in-x;
   }
 
   .dff-left-line-8 {
-    animation: var(--du8) var(--fadein) var(--de8) both dff-line;
+    animation: var(--du08) var(--fadein) var(--de08) both dff-line;
+  }
+
+  .dff-hi-right-5 {
+    display: inline;
+    animation: var(--du09) var(--fadein) var(--de09) both grow-in-x;
+  }
+
+  .dff-right-line-5 {
+    animation: var(--du10) var(--fadein) var(--de10) both dff-line;
+  }
+
+  .dff-right-line-6 {
+    animation: var(--du11) var(--fadein) var(--de11) both shrink-out-x;
+    transform-origin: left;
+  }
+
+  .dff-right-line-7 {
+    animation: var(--du12) var(--fadein) var(--de12) both shrink-out-x;
+    transform-origin: left;
+  }
+
+  .dff-right-line-8 {
+    animation: var(--du13) var(--fadein) var(--de13) both shrink-out-x;
+    transform-origin: left;
+  }
+
+  .dff-right-line-9 {
+    animation: var(--du14) var(--fadein) var(--de14) both dff-line-up;
+  }
+
+  .dff-right-line-10 {
+    animation: var(--du15) var(--fadein) var(--de15) both dff-line-up;
+  }
+
+  .dff-right-line-11 {
+    animation: var(--du16) var(--fadein) var(--de16) both dff-line-up;
+  }
+
+  .dff-right-line-12 {
+    animation: var(--du17) var(--fadein) var(--de17) both dff-line-up;
+  }
+
+  .dff-right-line-13 {
+    animation: var(--du18) var(--fadein) var(--de18) both dff-line-up;
+  }
+
+  .dff-right-line-14 {
+    animation: var(--du19) var(--fadein) var(--de19) both dff-line-up;
+  }
+
+  .dff-right-line-15 {
+    animation: var(--du20) var(--fadein) var(--de20) both dff-line-up;
   }
 }
